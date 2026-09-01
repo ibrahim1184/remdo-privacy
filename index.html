@@ -1,51 +1,454 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tutar - Gizlilik Politikası</title>
-    <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; padding: 20px; max-width: 800px; margin: 0 auto; color: #333; }
-        h1 { color: #111; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        h2 { color: #444; margin-top: 25px; }
-        p, li { font-size: 15px; color: #555; }
-        .last-updated { font-size: 13px; color: #888; margin-bottom: 30px; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="RemDo Privacy Policy / Gizlilik Politikası" />
+  <meta name="robots" content="index, follow" />
+  <title>RemDo - Privacy Policy</title>
+
+  <style>
+    :root {
+      --bg: #f7f6f2;
+      --card: #ffffff;
+      --text: #222222;
+      --muted: #666666;
+      --border: #e7e4dc;
+      --accent: #2f6f67;
+      --accent-soft: #e8f2ef;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.65;
+    }
+
+    .container {
+      width: min(900px, calc(100% - 32px));
+      margin: 48px auto;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    }
+
+    .header {
+      margin-bottom: 32px;
+    }
+
+    .app-name {
+      display: inline-block;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-weight: 700;
+      padding: 6px 12px;
+      border-radius: 999px;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(30px, 5vw, 44px);
+      line-height: 1.15;
+    }
+
+    h2 {
+      margin-top: 34px;
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    p, li {
+      color: var(--text);
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    ul {
+      padding-left: 22px;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .language-switcher {
+      display: flex;
+      gap: 10px;
+      margin: 24px 0 32px;
+    }
+
+    .language-switcher button {
+      border: 1px solid var(--border);
+      background: #fff;
+      color: var(--text);
+      padding: 10px 16px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .language-switcher button.active {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    .section {
+      display: none;
+    }
+
+    .section.active {
+      display: block;
+    }
+
+    .notice {
+      margin-top: 28px;
+      padding: 16px 18px;
+      border-radius: 14px;
+      background: var(--accent-soft);
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 22px;
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        margin: 20px auto;
+        width: min(100% - 20px, 900px);
+      }
+
+      .card {
+        padding: 24px 20px;
+        border-radius: 16px;
+      }
+    }
+  </style>
 </head>
+
 <body>
+  <main class="container">
+    <div class="card">
+      <header class="header">
+        <div class="app-name">RemDo</div>
+        <h1>Privacy Policy</h1>
+        <p class="muted">Last updated: September 1, 2026</p>
+      </header>
 
-    <h1>Gizlilik Politikası (Privacy Policy)</h1>
-    <div class="last-updated">Son Güncelleme: 22 Temmuz 2026</div>
+      <div class="language-switcher" aria-label="Language selection">
+        <button id="trBtn" class="active" type="button" onclick="showLanguage('tr')">Türkçe</button>
+        <button id="enBtn" type="button" onclick="showLanguage('en')">English</button>
+      </div>
 
-    <p><strong>Tutar</strong> ("Uygulama"), kişisel finansal verilerinizin gizliliğine ve güvenliğine en üst düzeyde önem vermektedir. Bu gizlilik politikası, uygulamanın verilerinizi nasıl işlediğini açıklar.</p>
+      <!-- TURKISH -->
+      <section id="tr" class="section active">
+        <p>
+          Bu Gizlilik Politikası, RemDo mobil uygulamasının kullanıcı bilgilerini nasıl
+          işlediğini açıklamaktadır. RemDo, kullanıcı gizliliğini ön planda tutacak şekilde
+          tasarlanmıştır.
+        </p>
 
-    <h2>1. Veri Toplama ve Saklama</h2>
-    <p>Tutar, gizlilik odaklı (privacy-first) olarak tasarlanmıştır:</p>
-    <ul>
-        <li><strong>Yerel Depolama:</strong> Harcamalarınız, ekstre özetleriniz ve tercihleriniz yalnızca cihazınızdaki yerel veritabanında saklanır.</li>
-        <li><strong>Sunucu Bulunmaz:</strong> Geliştiriciye ait harici bir sunucu veya bulut veritabanı bulunmamaktadır. Verileriniz sunuculara aktarılmaz.</li>
-        <li><strong>Kullanıcı Hesabı Yoktur:</strong> Uygulamayı kullanmak için üye olmanız, e-posta veya kişisel bilgi vermeniz gerekmez.</li>
-    </ul>
+        <h2>1. RemDo Hangi Bilgileri İşler?</h2>
+        <p>
+          RemDo'nun temel hatırlatma özellikleri cihaz üzerinde çalışır. Kullanıcının
+          oluşturduğu aşağıdaki bilgiler uygulamanın çalışabilmesi için cihazda yerel olarak
+          saklanabilir:
+        </p>
+        <ul>
+          <li>Hatırlatma başlığı ve açıklaması</li>
+          <li>Tarih, saat ve tekrar ayarları</li>
+          <li>Önem ve hatırlatma tercihleri</li>
+          <li>Tamamlanma durumu ve uygulama ayarları</li>
+          <li>Kullanıcının eklediği fotoğraf, dosya veya bağlantılar</li>
+          <li>Ücretsiz kullanım / deneme durumunun yönetilmesi için gerekli yerel uygulama bilgileri</li>
+        </ul>
 
-    <h2>2. İzinler ve İşlem Türleri</h2>
-    <ul>
-        <li><strong>Mikrofon ve Ses Tanıma:</strong> Sesli harcama girişi özelliği yalnızca kullanıcı başlatmasıyla çalışır. Ses kayıtları kalıcı olarak saklanmaz. Konuşma tanıma işlemi cihazınızın işletim sistemi (iOS / Android) tarafından sunulan servisler aracılığıyla gerçekleştirilir.</li>
-        <li><strong>PDF Ekstre Ayrıştırma:</strong> Yüklediğiniz banka ekstreleri cihaz içerisinde anlık olarak ayrıştırılır. PDF dosyalarının tamamı veya içeriği üçüncü taraf sunuculara gönderilmez.</li>
-    </ul>
+        <p>
+          Bu içerikler, RemDo'nun normal kullanımı sırasında geliştiriciye ait bir sunucuya
+          gönderilmez.
+        </p>
 
-    <h2>3. İzleme (Tracking) ve Analitik</h2>
-    <p>Uygulama içerisinde herhangi bir reklam SDK'sı, kullanıcı izleme aracı veya üçüncü taraf analitik (Google Analytics, Firebase vb.) servisi <strong>bulunmamaktadır</strong>.</p>
+        <h2>2. Hesap Oluşturma</h2>
+        <p>
+          RemDo'nun temel kullanımı için kullanıcı hesabı oluşturmanız veya ad, soyad,
+          telefon numarası ya da e-posta adresi vermeniz gerekmez.
+        </p>
 
-    <h2>4. İşletim Sistemi Yedeklemeleri</h2>
-    <p>Uygulama verileriniz geliştirici sunucularına aktarılmasa da, cihazınızın işletim sistemi ayarlarına bağlı olarak Google Drive veya Apple iCloud otomatik cihaz yedeklemelerine dahil olabilir.</p>
+        <h2>3. Siri ve Sistem Özellikleri</h2>
+        <p>
+          Kullanıcı Siri veya iOS tarafından sağlanan diğer sistem özelliklerini kullanmayı
+          seçerse, sesli komutların ve ilgili sistem verilerinin işlenmesi Apple'ın kendi
+          gizlilik politikaları ve sistem ayarları kapsamında gerçekleşebilir. RemDo yalnızca
+          uygulama işlevini gerçekleştirmek için işletim sistemi tarafından sağlanan gerekli
+          sonucu kullanır.
+        </p>
 
-    <h2>5. Verilerin Silinmesi</h2>
-    <p>Tüm verilerinizi uygulamanın <em>Ayarlar > Gizlilik ve Yasal Bildirimler</em> menüsünden dilediğiniz zaman silebilir veya uygulamayı tamamen sıfırlayabilirsiniz. Uygulamanın cihazdan silinmesi durumunda tüm veriler kalıcı olarak temizlenir.</p>
+        <h2>4. Fotoğraf ve Dosya Erişimi</h2>
+        <p>
+          RemDo, yalnızca kullanıcı bir hatırlatmaya fotoğraf veya dosya eklemek istediğinde
+          ilgili sistem izinlerini veya dosya seçicilerini kullanabilir. Seçilen içerikler
+          hatırlatma işlevi kapsamında kullanılır ve RemDo tarafından bağımsız olarak
+          geliştirici sunucularına yüklenmez.
+        </p>
 
-    <h2>6. İletişim</h2>
-    <p>Gizlilik politikası ile ilgili sorularınız için bizimle iletişime geçebilirsiniz:</p>
-    <p>E-posta: <strong>tutarapp.support@gmail.com</strong></p>
+        <h2>5. Bildirimler</h2>
+        <p>
+          RemDo, hatırlatmaları gösterebilmek için cihazın bildirim sistemini kullanır.
+          Bildirim izni kullanıcı tarafından işletim sistemi ayarlarından verilebilir veya
+          geri alınabilir.
+        </p>
 
+        <h2>6. Satın Alma ve Abonelikler</h2>
+        <p>
+          RemDo, Premium satın alma ve abonelik durumunun yönetilmesi için Apple'ın
+          In-App Purchase altyapısını ve RevenueCat hizmetini kullanabilir.
+        </p>
+        <p>
+          Satın alma işlemleri Apple tarafından gerçekleştirilir. RemDo geliştiricisi kredi
+          kartı veya banka kartı bilgilerinizi doğrudan görmez ya da saklamaz.
+          RevenueCat; satın alma durumu, ürün bilgisi, abonelik durumu ve satın alma işlemini
+          uygulama ile ilişkilendirmek için gerekli teknik tanımlayıcıları kendi hizmetini
+          sunmak amacıyla işleyebilir.
+        </p>
+        <p>
+          RevenueCat'in gizlilik uygulamaları hakkında daha fazla bilgi için:
+          <a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener noreferrer">
+            RevenueCat Privacy Policy
+          </a>
+        </p>
+
+        <h2>7. Reklam ve Takip</h2>
+        <p>
+          RemDo, kullanıcıları üçüncü taraf uygulamalar veya web siteleri arasında reklam
+          amacıyla takip etmek için tasarlanmamıştır. Uygulamada gelecekte reklam veya yeni
+          bir takip teknolojisi kullanılması durumunda bu politika ve App Store gizlilik
+          bilgileri güncellenecektir.
+        </p>
+
+        <h2>8. Verilerin Saklanması ve Silinmesi</h2>
+        <p>
+          Hatırlatmalar ve uygulama içeriğinin büyük bölümü kullanıcının cihazında saklanır.
+          Kullanıcı, ilgili hatırlatmaları veya ekleri uygulama içinden silebilir. Uygulamanın
+          cihazdan kaldırılması, işletim sisteminin saklama ve yedekleme davranışlarına bağlı
+          olarak uygulamaya ait yerel verilerin kaldırılmasını sağlayabilir.
+        </p>
+        <p>
+          RevenueCat veya Apple tarafından satın alma ve aboneliklerle ilgili tutulan veriler,
+          ilgili hizmetlerin kendi saklama politikalarına tabidir.
+        </p>
+
+        <h2>9. Üçüncü Taraf Hizmetler</h2>
+        <p>RemDo aşağıdaki üçüncü taraf hizmetlerinden yararlanabilir:</p>
+        <ul>
+          <li>Apple App Store / In-App Purchase</li>
+          <li>Apple Siri ve iOS sistem servisleri</li>
+          <li>RevenueCat</li>
+        </ul>
+
+        <h2>10. Çocukların Gizliliği</h2>
+        <p>
+          RemDo bilerek çocuklardan kişisel veri toplamayı amaçlamaz. Uygulamanın temel
+          özellikleri kullanıcı hesabı veya kişisel profil oluşturulmasını gerektirmez.
+        </p>
+
+        <h2>11. Güvenlik</h2>
+        <p>
+          Kullanıcı bilgilerinin korunması için makul teknik önlemler alınır. Bununla birlikte,
+          hiçbir elektronik saklama veya aktarım yöntemi mutlak güvenlik sağlayamaz.
+        </p>
+
+        <h2>12. Gizlilik Tercihleri ve İzinler</h2>
+        <p>
+          Fotoğraf, dosya, Siri ve bildirim gibi sistem izinleri iOS Ayarlar uygulaması
+          üzerinden yönetilebilir ve uygun olduğu durumlarda geri alınabilir.
+        </p>
+
+        <h2>13. Bu Politikadaki Değişiklikler</h2>
+        <p>
+          RemDo'nun özellikleri veya veri işleme uygulamaları değişirse bu Gizlilik Politikası
+          güncellenebilir. Güncel sürüm bu sayfada yayınlanır ve "Son güncelleme" tarihi
+          değiştirilir.
+        </p>
+
+        </section>
+
+      <!-- ENGLISH -->
+      <section id="en" class="section">
+        <p>
+          This Privacy Policy explains how the RemDo mobile application handles user
+          information. RemDo is designed with user privacy in mind.
+        </p>
+
+        <h2>1. Information RemDo Processes</h2>
+        <p>
+          RemDo's core reminder features operate on the user's device. The following
+          information may be stored locally on the device to provide the app's functionality:
+        </p>
+        <ul>
+          <li>Reminder titles and descriptions</li>
+          <li>Date, time, and repeat settings</li>
+          <li>Priority and reminder preferences</li>
+          <li>Completion status and app settings</li>
+          <li>Photos, files, or links added by the user</li>
+          <li>Local app information required to manage free usage or trial status</li>
+        </ul>
+
+        <p>
+          During normal use of RemDo, this content is not transmitted to servers operated by
+          the developer.
+        </p>
+
+        <h2>2. User Accounts</h2>
+        <p>
+          RemDo does not require you to create an account or provide your name, phone number,
+          or email address to use its core features.
+        </p>
+
+        <h2>3. Siri and System Features</h2>
+        <p>
+          If you choose to use Siri or other features provided by iOS, voice commands and
+          related system data may be processed by Apple according to Apple's own privacy
+          policies and your device settings. RemDo uses only the information provided by the
+          operating system that is necessary to perform the requested app action.
+        </p>
+
+        <h2>4. Photos and Files</h2>
+        <p>
+          RemDo may use system permissions or file pickers when you choose to attach a photo
+          or file to a reminder. Selected content is used for the reminder functionality and
+          is not independently uploaded by RemDo to servers operated by the developer.
+        </p>
+
+        <h2>5. Notifications</h2>
+        <p>
+          RemDo uses the device notification system to deliver reminders. Notification
+          permission can be granted or revoked through the operating system settings.
+        </p>
+
+        <h2>6. Purchases and Subscriptions</h2>
+        <p>
+          RemDo may use Apple's In-App Purchase system and RevenueCat to manage Premium
+          purchases and subscription status.
+        </p>
+        <p>
+          Payments are processed by Apple. The RemDo developer does not directly receive or
+          store your credit or debit card details. RevenueCat may process purchase status,
+          product information, subscription status, and technical identifiers needed to
+          associate purchases with the app and provide its service.
+        </p>
+        <p>
+          For more information about RevenueCat's privacy practices, see:
+          <a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener noreferrer">
+            RevenueCat Privacy Policy
+          </a>
+        </p>
+
+        <h2>7. Advertising and Tracking</h2>
+        <p>
+          RemDo is not designed to track users across third-party apps or websites for
+          advertising purposes. If advertising or additional tracking technologies are added
+          in the future, this Privacy Policy and the App Store privacy disclosures will be
+          updated accordingly.
+        </p>
+
+        <h2>8. Data Retention and Deletion</h2>
+        <p>
+          Most reminder content and app data are stored locally on the user's device. Users
+          can delete reminders and attachments from within the app. Removing the app from the
+          device may remove locally stored app data, subject to the operating system's storage
+          and backup behavior.
+        </p>
+        <p>
+          Purchase and subscription information retained by RevenueCat or Apple is subject to
+          the retention policies of those respective services.
+        </p>
+
+        <h2>9. Third-Party Services</h2>
+        <p>RemDo may use the following third-party services:</p>
+        <ul>
+          <li>Apple App Store / In-App Purchase</li>
+          <li>Apple Siri and iOS system services</li>
+          <li>RevenueCat</li>
+        </ul>
+
+        <h2>10. Children's Privacy</h2>
+        <p>
+          RemDo does not intentionally seek to collect personal information from children.
+          The app's core features do not require a user account or personal profile.
+        </p>
+
+        <h2>11. Security</h2>
+        <p>
+          Reasonable technical measures are used to protect user information. However, no
+          method of electronic storage or transmission can guarantee absolute security.
+        </p>
+
+        <h2>12. Privacy Choices and Permissions</h2>
+        <p>
+          System permissions such as photos, files, Siri, and notifications can be managed
+          and, where applicable, revoked through the iOS Settings app.
+        </p>
+
+        <h2>13. Changes to This Privacy Policy</h2>
+        <p>
+          This Privacy Policy may be updated if RemDo's features or data practices change.
+          The latest version will be published on this page and the "Last updated" date will
+          be revised.
+        </p>
+
+        </section>
+    </div>
+
+    <footer>
+      © 2026 RemDo. All rights reserved.
+    </footer>
+  </main>
+
+  <script>
+    function showLanguage(language) {
+      const trSection = document.getElementById("tr");
+      const enSection = document.getElementById("en");
+      const trBtn = document.getElementById("trBtn");
+      const enBtn = document.getElementById("enBtn");
+
+      if (language === "en") {
+        trSection.classList.remove("active");
+        enSection.classList.add("active");
+        trBtn.classList.remove("active");
+        enBtn.classList.add("active");
+        document.documentElement.lang = "en";
+      } else {
+        enSection.classList.remove("active");
+        trSection.classList.add("active");
+        enBtn.classList.remove("active");
+        trBtn.classList.add("active");
+        document.documentElement.lang = "tr";
+      }
+    }
+  </script>
 </body>
 </html>
-
