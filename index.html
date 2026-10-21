@@ -1,5 +1,3 @@
-
-```html
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -7,21 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta
     name="description"
-    content="Tutar Gizlilik Politikası / Tutar Privacy Policy"
+    content="RemDo Gizlilik Politikası / RemDo Privacy Policy — Android ve iOS için veri işleme, yerel saklama, fotoğraflar ve abonelikler."
   />
   <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#705dea" />
 
-  <title>Tutar - Gizlilik Politikası</title>
+  <title>RemDo — Gizlilik Politikası</title>
 
   <style>
     :root {
-      --background: #f7f6f2;
+      --background: #f7f8fc;
       --card: #ffffff;
-      --text: #222222;
-      --muted: #666666;
-      --border: #e7e4dc;
-      --accent: #2f6f67;
-      --accent-soft: #e8f2ef;
+      --text: #171e31;
+      --muted: #667085;
+      --border: #e6e8f0;
+      --accent: #5a46d6;
+      --accent-soft: #efebff;
     }
 
     * {
@@ -94,11 +93,18 @@
 
     a {
       color: var(--accent);
-      text-decoration: none;
+      overflow-wrap: anywhere;
+      text-decoration: underline;
+      text-underline-offset: 3px;
     }
 
     a:hover {
-      text-decoration: underline;
+      text-decoration-thickness: 2px;
+    }
+
+    :focus-visible {
+      outline: 3px solid #705dea;
+      outline-offset: 4px;
     }
 
     .muted {
@@ -107,11 +113,13 @@
 
     .language-switcher {
       display: flex;
+      flex-wrap: wrap;
       gap: 10px;
       margin: 24px 0 32px;
     }
 
     .language-switcher button {
+      min-height: 44px;
       padding: 10px 16px;
       border: 1px solid var(--border);
       border-radius: 12px;
@@ -136,11 +144,19 @@
       display: block;
     }
 
+    .section[hidden] {
+      display: none;
+    }
+
     .notice {
       margin-top: 28px;
       padding: 16px 18px;
       border-radius: 14px;
       background: var(--accent-soft);
+    }
+
+    .notice p {
+      margin: 0;
     }
 
     footer {
@@ -152,7 +168,7 @@
 
     @media (max-width: 640px) {
       .container {
-        width: min(100% - 20px, 900px);
+        width: min(calc(100% - 20px), 900px);
         margin: 20px auto;
       }
 
@@ -161,25 +177,72 @@
         border-radius: 16px;
       }
     }
+
+    @media print {
+      .container {
+        width: 100%;
+        margin: 0;
+      }
+
+      .card {
+        border: 0;
+        box-shadow: none;
+        padding: 0;
+      }
+
+      .language-switcher {
+        display: none;
+      }
+    }
   </style>
+
+  <noscript>
+    <style>
+      .section {
+        display: block !important;
+      }
+
+      .language-switcher {
+        display: none;
+      }
+
+      #en {
+        margin-top: 64px;
+        border-top: 1px solid #e6e8f0;
+        padding-top: 32px;
+      }
+
+      #en::before {
+        content: "Privacy Policy · English";
+        font-size: 32px;
+        font-weight: 700;
+      }
+    </style>
+  </noscript>
 </head>
 
 <body>
   <main class="container">
     <div class="card">
       <header class="header">
-        <div class="app-name">Tutar</div>
+        <div class="app-name">RemDo</div>
         <h1 id="pageTitle">Gizlilik Politikası</h1>
         <p id="lastUpdated" class="muted">
-          Son güncelleme: 24 Eylül 2026
+          Son güncelleme: 21 Ekim 2026
         </p>
       </header>
 
-      <div class="language-switcher" aria-label="Dil seçimi">
+      <div
+        class="language-switcher"
+        role="group"
+        aria-label="Dil seçimi / Language selection"
+      >
         <button
           id="trButton"
           class="active"
           type="button"
+          aria-pressed="true"
+          aria-controls="tr"
           onclick="showLanguage('tr')"
         >
           Türkçe
@@ -188,516 +251,787 @@
         <button
           id="enButton"
           type="button"
+          aria-pressed="false"
+          aria-controls="en"
           onclick="showLanguage('en')"
         >
           English
         </button>
       </div>
 
-      <section id="tr" class="section active">
-        <p>
-          Bu Gizlilik Politikası, Tutar mobil uygulamasının kullanıcı
-          bilgilerini ve uygulama verilerini nasıl işlediğini açıklamaktadır.
-          Tutar, kişisel finans verilerinin gizliliğini temel tasarım ilkesi
-          olarak benimser.
-        </p>
-
+      <section
+        id="tr"
+        lang="tr"
+        class="section active"
+        aria-labelledby="pageTitle"
+      >
         <h2>1. Genel yaklaşım</h2>
 
         <p>
-          Tutar’ın temel özellikleri cihaz üzerinde çalışır. Uygulama,
-          kullanıcı hesabı oluşturulmasını veya ad, soyad, telefon numarası ya
-          da e-posta adresi verilmesini gerektirmez.
+          RemDo, kişisel hatırlatmalarınızı ve günlük planlarınızı
+          yönetmenize yardımcı olan bir mobil uygulamadır. Bu Gizlilik
+          Politikası, RemDo’nun Android ve iOS sürümlerinde hangi bilgilerin
+          işlendiğini, bu bilgilerin hangi amaçlarla kullanıldığını ve
+          seçeneklerinizi açıklar.
         </p>
 
         <p>
-          Tutar’ın geliştiriciye ait bir sunucusu veya bulut veritabanı
-          bulunmamaktadır. Harcama ve ekstre bilgileriniz Tutar tarafından
-          geliştirici sunucularına gönderilmez.
+          Temel hatırlatma özellikleri cihazınızda çalışır. RemDo hesabı
+          oluşturmanız veya uygulamayı kullanmak için adınızı, telefon
+          numaranızı ya da e-posta adresinizi vermeniz gerekmez.
+        </p>
+
+        <p>
+          Hatırlatma içeriklerini saklamak için geliştiricinin işlettiği bir
+          sunucu veya bulut veritabanı kullanılmaz. iOS abonelik hizmetleri,
+          isteğinizle açılan harici bağlantılar, Siri ve e-posta gibi aşağıda
+          açıklanan hizmetlerin veri işlemesi bu yerel saklama yaklaşımından
+          ayrıdır.
         </p>
 
         <h2>2. Cihazda saklanan bilgiler</h2>
 
         <p>
-          Aşağıdaki bilgiler, uygulamanın işlevlerini sağlayabilmek amacıyla
-          cihazınızda yerel olarak saklanabilir:
+          RemDo’nun işlevlerini sağlamak amacıyla aşağıdaki bilgiler
+          cihazınızdaki uygulama alanında saklanır:
         </p>
 
         <ul>
-          <li>Eklediğiniz harcamalar ve harcama açıklamaları</li>
-          <li>Tutar, tarih, kategori ve ödeme bilgileri</li>
-          <li>Özel kategoriler ve kategori adlarında yaptığınız değişiklikler</li>
-          <li>Ekstre dönemleri ve içe aktarılan işlem kayıtları</li>
-          <li>İşyeri ve kategori eşleştirme tercihleri</li>
-          <li>Uygulama ayarları ve kullanıcı tercihleri</li>
-          <li>Yedekleme ve yinelenen kayıtları önleme amacıyla kullanılan yerel bilgiler</li>
+          <li>
+            Hatırlatma başlıkları, kayıt kimlikleri, oluşturulma tarihleri,
+            planlanan tarih ve saatler
+          </li>
+          <li>
+            Tekrar kuralları, seçili günler, yeniden uyarma aralıkları ve
+            bildirim tercihleri
+          </li>
+          <li>
+            Tamamlanma ve erteleme bilgileri ile tamamlanan hatırlatmalar
+          </li>
+          <li>
+            Seçtiğiniz fotoğrafların uygulamaya kopyalanan dosyaları ve
+            dosya adları
+          </li>
+          <li>Eklediğiniz bağlantılar ve bağlantı adları</li>
+          <li>Uygulama dili gibi kullanıcı tercihleri</li>
+          <li>
+            Ücretsiz özellik denemesi kullanım sayacı ve varsa önbelleğe
+            alınmış Premium erişim durumu
+          </li>
         </ul>
 
         <p>
-          Bu bilgiler cihazınızdaki yerel uygulama veritabanında tutulur.
-          Tutar bu verileri kendisine ait uzak bir sunucuya yüklemez.
+          Hatırlatmalar yerel SQLite veritabanında, tercihler işletim
+          sisteminin uygulama ayarlarında saklanır. Bu hatırlatma içerikleri
+          ve eklediğiniz fotoğraflar geliştiriciye veya abonelik sağlayıcısına
+          gönderilmez.
         </p>
 
-        <h2>3. Mikrofon ve sesli giriş</h2>
+        <h2>3. Fotoğraflar ve ekler</h2>
 
         <p>
-          Tutar, kullanıcının harcamalarını sesli olarak ekleyebilmesi için
-          mikrofon erişimi isteyebilir. Mikrofon yalnızca kullanıcı sesli giriş
-          işlemini başlattığında kullanılır.
-        </p>
-
-        <ul>
-          <li>Tutar ses kayıtlarını kalıcı olarak saklamaz.</li>
-          <li>Ses kayıtları reklam veya kullanıcı profili oluşturma amacıyla kullanılmaz.</li>
-          <li>Sesli giriş sonucunda oluşturulan metin, harcama bilgilerini hazırlamak amacıyla kullanılır.</li>
-        </ul>
-
-        <p>
-          Konuşma tanıma işlemi, cihazın destek durumuna bağlı olarak Android
-          veya iOS tarafından sağlanan konuşma tanıma servisleri üzerinden
-          gerçekleştirilebilir. Bu sistem servislerinin veri işleme biçimi,
-          cihaz üreticisinin, Google’ın veya Apple’ın kendi gizlilik
-          politikalarına ve cihaz ayarlarınıza tabi olabilir.
-        </p>
-
-        <h2>4. PDF banka ekstreleri</h2>
-
-        <p>
-          Kullanıcı tarafından seçilen PDF banka ekstreleri, işlem
-          bilgilerinin ayrıştırılması amacıyla cihaz üzerinde işlenir.
-        </p>
-
-        <ul>
-          <li>PDF dosyaları Tutar’a ait bir sunucuya gönderilmez.</li>
-          <li>PDF dosyasının tamamı uygulama veritabanında kalıcı olarak saklanmaz.</li>
-          <li>Yalnızca kullanıcının kontrol edip onayladığı işlemler harcama kaydı olarak kaydedilir.</li>
-          <li>Kullanıcı, içe aktarılan işlemleri kaydetmeden önce düzenleyebilir veya aktarımı iptal edebilir.</li>
-        </ul>
-
-        <h2>5. Dosya erişimi ve veri dışa aktarma</h2>
-
-        <p>
-          Tutar, yalnızca kullanıcı bir PDF ekstre veya yedek dosyası seçtiğinde
-          sistem dosya seçicisini kullanır. Uygulama, kullanıcının özellikle
-          seçmediği dosyalara genel erişim sağlamaya çalışmaz.
+          Fotoğraf eklemeyi seçtiğinizde cihazın sistem fotoğraf seçicisi
+          açılır. Gerekli olduğu durumlarda fotoğraf erişim izni işletim
+          sistemi tarafından istenir. RemDo, seçtiğiniz fotoğrafı
+          hatırlatmada gösterebilmek için uygulamanın özel dosya alanına
+          kopyalar.
         </p>
 
         <p>
-          Kullanıcı, uygulamadaki verilerini desteklenen dosya biçimlerinde
-          dışa aktarabilir. Dışa aktarılan dosyanın nerede saklanacağına ve
-          kimlerle paylaşılacağına kullanıcı karar verir. Dışa aktarılan
-          dosyaların güvenliğinden kullanıcı sorumludur.
+          RemDo arka planda fotoğraf kitaplığınızı taramaz veya
+          fotoğraflarınızı bir sunucuya yüklemez. Bir fotoğraf ekini
+          kaldırdığınızda ya da ilgili hatırlatmayı sildiğinizde, başka bir
+          hatırlatma tarafından kullanılmayan uygulama kopyası silinir.
+          Galerinizdeki asıl fotoğraf değiştirilmez veya silinmez.
         </p>
 
-        <h2>6. Reklam, analitik ve takip</h2>
-
-        <p>Tutar içerisinde:</p>
-
-        <ul>
-          <li>Reklam gösterilmez.</li>
-          <li>Reklam kimliği kullanılmaz.</li>
-          <li>Üçüncü taraf reklam SDK’sı bulunmaz.</li>
-          <li>Google Analytics, Firebase Analytics veya benzeri kullanıcı takip araçları bulunmaz.</li>
-          <li>Kullanıcılar farklı uygulamalar veya web siteleri arasında takip edilmez.</li>
-        </ul>
-
-        <h2>7. Kullanıcı hesabı ve ödeme bilgileri</h2>
+        <h2>4. Bildirimler, saat dilimi ve cihaz izinleri</h2>
 
         <p>
-          Tutar’ın mevcut sürümünde kullanıcı hesabı, üyelik sistemi,
-          abonelik veya uygulama içi satın alma özelliği bulunmamaktadır.
-          Tutar kredi kartı veya banka kartı bilgisi istemez, işlemez veya
-          saklamaz.
-        </p>
-
-        <h2>8. Geri bildirim ve e-posta</h2>
-
-        <p>
-          Kullanıcı uygulama içindeki geri bildirim özelliğini kullanmayı
-          seçerse Tutar, cihazdaki varsayılan e-posta uygulamasını açarak bir
-          e-posta taslağı hazırlayabilir. Mesaj yalnızca kullanıcı tarafından
-          kontrol edilip gönderildikten sonra iletilir.
+          RemDo hatırlatmaları cihazınızda yerel bildirimler olarak planlar;
+          hatırlatma içeriklerini iletmek için geliştiriciye ait bir uzak
+          bildirim sunucusu kullanmaz. Bildirim başlığında veya içeriğinde
+          hatırlatmanızın metni görünebilir. Kilit ekranındaki görünürlüğü
+          cihazınızın bildirim ayarlarından yönetebilirsiniz.
         </p>
 
         <p>
-          Kullanıcı izin verirse geri bildirim taslağına uygulama sürümü,
-          işletim sistemi sürümü, platform ve cihaz modeli gibi teknik bilgiler
-          eklenebilir. Bu bilgiler otomatik olarak gönderilmez; gönderim
-          kullanıcının e-posta uygulaması ve e-posta sağlayıcısı üzerinden
-          gerçekleşir.
+          Bildirim izni, Android’de kesin zamanlı hatırlatma planlama
+          yetkisi ve cihaz yeniden başlatıldığında planları yenileme desteği
+          bu işlevler için kullanılır. Yerel saat dilimi bilgisi, seçtiğiniz
+          saatte hatırlatma yapabilmek için okunur; bu işlem GPS konumuna
+          erişim gerektirmez.
         </p>
 
-        <h2>9. İşletim sistemi yedeklemeleri</h2>
+        <h2>5. iOS Siri ve Kestirmeler</h2>
 
         <p>
-          Tutar verilerinizi geliştirici sunucularına göndermez. Bununla
-          birlikte, cihazınızın yedekleme ayarlarına bağlı olarak yerel uygulama
-          verileri Google veya Apple tarafından sağlanan sistem yedeklerine
-          dahil edilebilir.
+          Desteklenen iOS cihazlarında, erişiminiz olan Siri/Kestirmeler
+          özelliğini kullanarak hatırlatma oluşturabilirsiniz. Apple’ın
+          sistem hizmetinden RemDo’ya aktarılan hatırlatma başlığı ve
+          zamanı, diğer hatırlatmalar gibi cihazda saklanır.
         </p>
 
         <p>
-          Sistem yedeklemeleri Google’ın, Apple’ın ve cihazınızda seçtiğiniz
-          yedekleme hizmetinin kendi şartlarına ve gizlilik politikalarına
+          RemDo’nun kendi içinde ses kaydı alan veya saklayan bir mikrofon
+          özelliği yoktur. Siri’ye verdiğiniz sesli komutların işlenmesi
+          Apple’ın hizmetlerine, gizlilik politikasına ve Siri ayarlarınıza
           tabidir.
         </p>
 
-        <h2>10. Verilerin saklanması ve silinmesi</h2>
+        <h2>6. Premium abonelikler ve RevenueCat</h2>
 
         <p>
-          Uygulama verileri, kullanıcı tarafından silinene veya uygulama
-          kaldırılana kadar cihazda saklanabilir.
+          <strong>iOS:</strong> RemDo Premium abonelikleri Apple App Store
+          üzerinden işlenir. Satın almaların doğrulanması, abonelik
+          durumunun kontrol edilmesi, Premium erişimin açılması ve satın
+          almaların geri yüklenmesi için RevenueCat kullanılır.
         </p>
 
         <p>
-          Kullanıcı uygulama içerisinden harcamalarını silebilir, ekstre
-          aktarımını geri alabilir, verilerini dışa aktarabilir veya uygulama
-          verilerini sıfırlayabilir. Uygulamanın cihazdan kaldırılması yerel
-          verilerin silinmesini sağlar; ancak daha önce oluşturulmuş sistem
-          yedekleri, işletim sisteminin yedekleme politikasına göre tutulmaya
-          devam edebilir.
+          RevenueCat, iOS uygulaması açıldığında abonelik durumunu kontrol
+          etmek için başlatılabilir; veri işlemesi yalnızca bir satın alma
+          yaptığınız ana bağlı değildir. Bu kapsamda rastgele oluşturulan
+          uygulama kullanıcı kimliği, satın alma makbuzu/işlem bilgileri,
+          ürün ve abonelik durumu, geçerlilik tarihleri ile hizmetin
+          çalışması için gereken uygulama ve işletim sistemi bilgileri
+          işlenebilir. Satın alma geçmişi, abonelik analizi ve raporlaması
+          için de kullanılabilir.
         </p>
 
-        <h2>11. Üçüncü taraf ve sistem hizmetleri</h2>
-
         <p>
-          Tutar’ın işlevleri aşağıdaki sistem hizmetleriyle etkileşim
-          kurabilir:
+          Hatırlatma başlıklarınız, fotoğraflarınız ve eklediğiniz bağlantılar
+          RevenueCat’e gönderilmez. RemDo kredi kartı veya banka kartı
+          numaranızı almaz ya da saklamaz; ödeme bilgileri Apple tarafından
+          yönetilir.
         </p>
 
-        <ul>
-          <li>Android veya iOS konuşma tanıma servisleri</li>
-          <li>Android ve iOS sistem dosya seçicileri</li>
-          <li>Google Play ve Apple App Store hizmetleri</li>
-          <li>Google veya Apple tarafından sağlanan isteğe bağlı cihaz yedekleme hizmetleri</li>
-          <li>Kullanıcının seçtiği harici e-posta uygulaması ve e-posta sağlayıcısı</li>
-        </ul>
-
         <p>
-          Bu hizmetlerin işlediği veriler ilgili hizmet sağlayıcısının kendi
-          gizlilik politikasına tabidir.
+          <strong>Android:</strong> Bu politikanın güncellendiği tarihteki
+          1.0.0 sürümünde Google Play Billing ve RevenueCat üzerinden satın
+          alma/abonelik hizmeti etkin değildir. Bu sürümde uygulama içi
+          abonelik satın alma işlemi sunulmaz.
         </p>
 
-        <h2>12. Çocukların gizliliği</h2>
+        <p>
+          İlgili sağlayıcıların açıklamaları:
+          <a href="https://www.apple.com/legal/privacy/">
+            Apple Gizlilik Politikası
+          </a>
+          ve
+          <a href="https://www.revenuecat.com/privacy/">
+            RevenueCat Gizlilik Politikası
+          </a>.
+        </p>
+
+        <h2>7. Deneme sayacı ve yerel Premium önbelleği</h2>
 
         <p>
-          Tutar, 18 yaş ve üzerindeki kullanıcılar için tasarlanmıştır ve
-          çocuklara yönelik değildir. Uygulama bilerek çocuklardan kişisel veri
-          toplamayı amaçlamaz.
+          Gelişmiş özelliklerin ücretsiz kullanım sınırını uygulamak için,
+          deneme kapsamında oluşturulan hatırlatmaların sayısı cihazda
+          tutulur. Bu sayaç hatırlatma metinlerini içermez.
+        </p>
+
+        <p>
+          iOS’ta deneme kullanım sayacı güvenli anahtar zincirinde
+          (Keychain) saklanır ve uygulamayı kaldırıp yeniden kurmanızdan
+          sonra korunabilir. Android’de sayaç uygulamanın yerel
+          tercihlerinde tutulur. Premium erişim bilgisi, uygulamanın
+          çevrimdışı erişimi değerlendirebilmesi için cihazda önbelleğe
+          alınabilir.
+        </p>
+
+        <h2>8. Reklam, analitik ve takip</h2>
+
+        <p>
+          RemDo reklam göstermez, reklam kimliğini reklam hedefleme amacıyla
+          kullanmaz ve kullanıcıları farklı uygulamalar veya web siteleri
+          arasında reklam amacıyla takip etmez.
+        </p>
+
+        <p>
+          Uygulamada Firebase Analytics, Google Analytics veya benzeri genel
+          kullanıcı davranışı takip araçları kullanılmaz. iOS’ta
+          RevenueCat’in abonelik doğrulaması ve satın alma
+          analizi/raporlaması için yaptığı işlemler 6. bölümde ayrıca
+          açıklanmıştır.
+        </p>
+
+        <h2>9. Destek ve e-posta ile geri bildirim</h2>
+
+        <p>
+          Ayarlar → Destek → “E-posta ile destek al” seçeneği,
+          cihazınızdaki e-posta uygulamasında
+          <a href="mailto:ibrahim.buu@gmail.com?subject=RemDo%20Support">
+            ibrahim.buu@gmail.com
+          </a>
+          adresine, “RemDo Support” konulu bir taslak açar. RemDo mesajı
+          otomatik göndermez.
+        </p>
+
+        <p>
+          Mevcut sürüm cihaz modeli, işletim sistemi sürümü veya hatırlatma
+          kayıtlarını taslağa otomatik eklemez. Mesajı gönderirseniz e-posta
+          adresiniz, yazdığınız içerik ve kendi eklediğiniz dosyalar destek
+          talebini yanıtlamak amacıyla geliştirici ve e-posta hizmeti
+          sağlayıcıları tarafından işlenir. Gerekli olmayan kişisel
+          bilgileri veya özel hatırlatma içeriklerini paylaşmamanız
+          önerilir.
+        </p>
+
+        <h2>10. Harici bağlantılar</h2>
+
+        <p>
+          Hatırlatmanıza eklediğiniz bir web bağlantısına dokunduğunuzda
+          bağlantı cihazınızın harici tarayıcısında açılır. Ziyaret ettiğiniz
+          sitenin IP adresi, çerez veya diğer verileri işlemesi ilgili
+          sitenin ve tarayıcı sağlayıcısının gizlilik uygulamalarına
+          tabidir. RemDo bu sitelerin içeriğini veya veri uygulamalarını
+          yönetmez.
+        </p>
+
+        <h2>11. İşletim sistemi yedeklemeleri</h2>
+
+        <p>
+          RemDo kendi bulut eşitleme veya yedekleme hizmetini sunmaz.
+          Bununla birlikte, cihaz ve hesap ayarlarınıza bağlı olarak yerel
+          uygulama verileri Apple, Google veya cihaz üreticinizin sunduğu
+          sistem yedeklerine dahil edilebilir ve daha sonra geri
+          yüklenebilir.
+        </p>
+
+        <p>
+          Sistem yedeklerinin saklanması, silinmesi ve veri işleme koşulları
+          ilgili sağlayıcının politikalarına ve seçtiğiniz yedekleme
+          ayarlarına tabidir.
+        </p>
+
+        <h2>12. Verilerin saklanması ve silinmesi</h2>
+
+        <p>
+          Aktif ve tamamlanan hatırlatmalar siz silene kadar cihazda
+          tutulabilir. Bir hatırlatmayı sildiğinizde ilgili kayıt, planlı
+          bildirimler ve başka bir kayıtta kullanılmayan uygulama içi
+          fotoğraf kopyaları kaldırılır.
+        </p>
+
+        <p>
+          Uygulamayı kaldırmak, işletim sisteminin yönettiği yerel uygulama
+          verilerini kaldırır. Daha önce oluşturulmuş sistem yedekleri ve
+          iOS Keychain deneme sayacı korunabilir. Uygulamayı silmek Apple
+          aboneliğinizi iptal etmez; aboneliğinizi Apple hesabınızın
+          abonelik ayarlarından yönetmelisiniz.
+        </p>
+
+        <p>
+          Destek yazışmaları talebinizi çözmek, gerekli devam işlemlerini
+          yapmak ve varsa yasal yükümlülükleri yerine getirmek için gereken
+          süre boyunca saklanabilir. Apple ve RevenueCat’teki satın alma
+          kayıtları yerel hatırlatmalardan ayrıdır; bu kayıtların saklanması
+          ilgili hizmet ve yasal gerekliliklere tabidir.
+        </p>
+
+        <p>
+          Geliştiricinin elindeki destek verileri veya iOS abonelik
+          hizmetine iletilen verilerle ilgili bir silme talebiniz varsa
+          <a href="mailto:ibrahim.buu@gmail.com">
+            ibrahim.buu@gmail.com
+          </a>
+          üzerinden iletişime geçebilirsiniz. Talebin doğru kayıtla
+          eşleştirilmesi için gereken sınırlı bilgiler istenebilir.
+          Cihazınızda tutulan hatırlatma içeriklerine geliştiricinin
+          uzaktan erişimi yoktur.
         </p>
 
         <h2>13. Veri güvenliği</h2>
 
         <p>
-          Tutar, kullanıcı verilerini cihaz üzerinde tutarak gereksiz veri
-          aktarımını azaltmayı amaçlar. Bununla birlikte hiçbir elektronik
-          saklama yöntemi mutlak güvenlik sağlayamaz. Kullanıcının cihaz
-          güvenliğini, ekran kilidini ve sistem yedekleme tercihlerini uygun
-          şekilde yönetmesi önerilir.
-        </p>
-
-        <h2>14. İzinlerin yönetilmesi</h2>
-
-        <p>
-          Mikrofon gibi sistem izinleri cihaz ayarları üzerinden görüntülenebilir
-          ve geri alınabilir. Mikrofon izni verilmediğinde kullanıcı harcamalarını
-          manuel olarak eklemeye devam edebilir.
-        </p>
-
-        <h2>15. Politikadaki değişiklikler</h2>
-
-        <p>
-          Tutar’ın özellikleri veya veri işleme uygulamaları değişirse bu
-          Gizlilik Politikası güncellenebilir. Güncel sürüm bu sayfada
-          yayınlanır ve son güncelleme tarihi değiştirilir.
-        </p>
-
-        <h2>16. İletişim</h2>
-
-        <p>
-          Bu Gizlilik Politikası veya Tutar’ın veri işleme uygulamaları
-          hakkındaki sorularınız için:
+          RemDo yerel verileri işletim sisteminin uygulamaya ayrılmış
+          alanında tutar; iOS deneme sayacı için Keychain kullanır. Yerel
+          hatırlatma veritabanında uygulamaya özel ek bir şifreleme katmanı
+          bulunmaz; cihazın ekran kilidi, disk koruması ve uygulama alanı
+          güvenliği önemlidir. Hiçbir elektronik saklama yöntemi mutlak
+          güvenlik sağlayamaz.
         </p>
 
         <p>
-          E-posta:
-          <a href="mailto:tutarapp.support@gmail.com">
-            tutarapp.support@gmail.com
+          Abonelik doğrulaması gibi ağ işlemleri ilgili sağlayıcıların
+          güvenli bağlantıları üzerinden yürütülür. Harici hizmetler
+          bulundukları ülkelere ve altyapılarına göre verileri ülkeniz
+          dışında işleyebilir; ayrıntılar ilgili sağlayıcıların gizlilik
+          açıklamalarındadır.
+        </p>
+
+        <h2>14. Seçenekleriniz, izinler ve gizlilik talepleri</h2>
+
+        <p>
+          Fotoğraf, bildirim, kesin alarm ve Siri/Kestirmeler erişimini
+          cihazınızın izin ve uygulama ayarlarından yönetebilirsiniz.
+          İzinleri sınırlandırmanız ilgili işlevlerin çalışmasını
+          etkileyebilir; temel hatırlatma kayıtlarını manuel olarak
+          yönetmeye devam edebilirsiniz.
+        </p>
+
+        <p>
+          Uygulanabilir mevzuat kapsamındaki erişim, düzeltme, silme veya
+          diğer gizlilik taleplerinizi aşağıdaki iletişim adresine
+          gönderebilirsiniz. RemDo bir kullanıcı hesabı oluşturmadığından
+          uygulama içinde kapatılacak ayrı bir RemDo hesabı bulunmaz.
+          Destek talebinizle paylaştığınız veriler ve üçüncü taraf
+          hizmetlerindeki abonelik kayıtları için ayrı süreçler
+          gerekebilir.
+        </p>
+
+        <h2>15. Çocukların gizliliği</h2>
+
+        <p>
+          RemDo’nun temel işlevleri hesap veya kimlik bilgisi verilmesini
+          gerektirmez. Bir ebeveyn veya vasi olarak, çocuğunuzun destek
+          kanalı üzerinden kişisel bilgi paylaştığını düşünüyorsanız bu
+          bilgilerin incelenmesi ve uygun şekilde kaldırılması için
+          bizimle iletişime geçebilirsiniz.
+        </p>
+
+        <h2>16. Politikadaki değişiklikler</h2>
+
+        <p>
+          RemDo’nun özellikleri, hizmet sağlayıcıları veya veri işleme
+          uygulamaları değiştiğinde bu politika güncellenebilir. Güncel
+          metin bu sayfada sunulur ve son güncelleme tarihi yenilenir.
+        </p>
+
+        <h2>17. İletişim</h2>
+
+        <p>
+          Uygulama ve gizlilik iletişimi:
+          <strong>RemDo geliştiricisi</strong>
+        </p>
+
+        <p>
+          Bu politika, destek verileriniz veya gizlilik talepleriniz hakkında:
+          <a href="mailto:ibrahim.buu@gmail.com?subject=RemDo%20Privacy">
+            ibrahim.buu@gmail.com
           </a>
         </p>
 
         <div class="notice">
-          Tutar; kullanıcı hesabı, reklam, reklam kimliği, geliştirici sunucusu
-          veya üçüncü taraf analitik sistemi kullanmaz.
+          <p>
+            <strong>Özet:</strong> Hatırlatma içerikleriniz ve fotoğraflarınız
+            cihazınızda kalır. iOS abonelik doğrulaması ve satın alma analizi
+            için Apple ve RevenueCat kullanılır. Destek e-postası yalnızca
+            siz gönderdiğinizde iletilir.
+          </p>
         </div>
       </section>
 
-      <section id="en" class="section">
-        <p>
-          This Privacy Policy explains how the Tutar mobile application handles
-          user information and application data. Tutar treats the privacy of
-          personal financial information as a core design principle.
-        </p>
-
+      <section
+        id="en"
+        lang="en"
+        class="section"
+        aria-labelledby="pageTitle"
+      >
         <h2>1. General approach</h2>
 
         <p>
-          Tutar’s core features operate on the user’s device. The application
-          does not require users to create an account or provide their name,
-          phone number, or email address.
+          RemDo is a mobile application that helps you manage personal
+          reminders and daily plans. This Privacy Policy explains what
+          information is processed in the Android and iOS versions of
+          RemDo, why it is used, and the choices available to you.
         </p>
 
         <p>
-          Tutar does not use a developer-operated server or cloud database.
-          Expense and statement information is not transmitted to servers
-          operated by the developer.
+          Core reminder features operate on your device. You do not need to
+          create a RemDo account or provide your name, phone number, or
+          email address to use the app.
         </p>
 
-        <h2>2. Information stored on the device</h2>
-
         <p>
-          The following information may be stored locally on the device to
-          provide the application’s functionality:
+          The developer does not operate a server or cloud database for
+          storing reminder content. Processing by iOS subscription
+          services, external links you open, Siri, and email services is
+          separate from this local storage approach and is described below.
         </p>
 
-        <ul>
-          <li>Expenses and expense descriptions entered by the user</li>
-          <li>Amounts, dates, categories, and payment information</li>
-          <li>Custom categories and category name changes</li>
-          <li>Statement periods and imported transaction records</li>
-          <li>Merchant and category matching preferences</li>
-          <li>Application settings and user preferences</li>
-          <li>Local information used for backups and duplicate detection</li>
-        </ul>
+        <h2>2. Information stored on your device</h2>
 
         <p>
-          This information is stored in the application’s local database on the
-          device. Tutar does not upload this data to a remote server operated by
-          the developer.
-        </p>
-
-        <h2>3. Microphone and voice entry</h2>
-
-        <p>
-          Tutar may request microphone access so users can add expenses by
-          voice. The microphone is used only after the user starts a voice
-          entry operation.
+          The following information is stored in the app’s space on your
+          device to provide RemDo’s features:
         </p>
 
         <ul>
-          <li>Tutar does not permanently store voice recordings.</li>
-          <li>Voice recordings are not used for advertising or user profiling.</li>
-          <li>Recognized text is used to prepare expense information.</li>
+          <li>
+            Reminder titles, record identifiers, creation dates, and
+            scheduled dates and times
+          </li>
+          <li>
+            Recurrence rules, selected days, follow-up intervals, and
+            notification preferences
+          </li>
+          <li>
+            Completion and snooze information, including completed reminders
+          </li>
+          <li>Copies of selected photos and their file names</li>
+          <li>Links and link names you attach</li>
+          <li>Preferences such as your app language</li>
+          <li>
+            The feature-trial usage counter and, where applicable, cached
+            Premium access status
+          </li>
         </ul>
 
         <p>
-          Depending on device support, speech recognition may be performed
-          through services provided by Android or iOS. The handling of data by
-          these system services may be subject to the privacy policies of the
-          device manufacturer, Google, or Apple, as well as the user’s device
+          Reminders are stored in a local SQLite database and preferences
+          in operating-system app storage. This reminder content and your
+          attached photos are not sent to the developer or the subscription
+          provider.
+        </p>
+
+        <h2>3. Photos and attachments</h2>
+
+        <p>
+          When you choose to attach a photo, the system photo picker opens.
+          The operating system requests photo access where necessary.
+          RemDo copies the photo you select into the app’s private file
+          storage so it can be displayed with your reminder.
+        </p>
+
+        <p>
+          RemDo does not scan your photo library in the background or upload
+          your photos to a server. When you remove a photo attachment or
+          delete its reminder, the app’s copy is deleted if no other
+          reminder uses it. The original photo in your library is not
+          changed or deleted.
+        </p>
+
+        <h2>4. Notifications, time zone, and device permissions</h2>
+
+        <p>
+          RemDo schedules reminders as local notifications on your device.
+          It does not use a developer-operated remote notification server
+          to transmit reminder content. Your reminder text may appear in
+          notification titles or content. You can control lock-screen
+          visibility in your device’s notification settings.
+        </p>
+
+        <p>
+          Notification permission, Android exact-alarm scheduling access,
+          and rescheduling after a device restart are used for these
+          features. The local time zone is read to schedule reminders at
+          your chosen time; this does not require access to GPS location.
+        </p>
+
+        <h2>5. iOS Siri and Shortcuts</h2>
+
+        <p>
+          On supported iOS devices, you can create reminders using
+          Siri/Shortcuts where you have access to that feature. The
+          reminder title and time passed from Apple’s system service to
+          RemDo are stored on your device like other reminders.
+        </p>
+
+        <p>
+          RemDo does not include its own microphone feature for recording
+          or storing audio. Processing of spoken commands given to Siri
+          is subject to Apple’s services, privacy policy, and your Siri
           settings.
         </p>
 
-        <h2>4. PDF bank statements</h2>
+        <h2>6. Premium subscriptions and RevenueCat</h2>
 
         <p>
-          PDF bank statements selected by the user are processed on the device
-          to extract transaction information.
-        </p>
-
-        <ul>
-          <li>PDF files are not transmitted to a server operated by Tutar.</li>
-          <li>The complete PDF file is not permanently stored in the application database.</li>
-          <li>Only transactions reviewed and approved by the user are saved as expenses.</li>
-          <li>Users can edit transactions or cancel an import before saving.</li>
-        </ul>
-
-        <h2>5. File access and data export</h2>
-
-        <p>
-          Tutar uses the system file picker only when the user chooses a PDF
-          statement or backup file. The application does not attempt to access
-          files that the user has not specifically selected.
+          <strong>iOS:</strong> RemDo Premium subscriptions are processed
+          through Apple’s App Store. RevenueCat is used to validate
+          purchases, check subscription status, enable Premium access,
+          and restore purchases.
         </p>
 
         <p>
-          Users may export their application data in supported file formats.
-          The user controls where exported files are stored and with whom they
-          are shared. The user is responsible for protecting exported files.
-        </p>
-
-        <h2>6. Advertising, analytics, and tracking</h2>
-
-        <p>Tutar does not:</p>
-
-        <ul>
-          <li>Display advertisements</li>
-          <li>Use an advertising identifier</li>
-          <li>Include third-party advertising SDKs</li>
-          <li>Use Google Analytics, Firebase Analytics, or similar tracking tools</li>
-          <li>Track users across third-party applications or websites</li>
-        </ul>
-
-        <h2>7. User accounts and payment information</h2>
-
-        <p>
-          The current version of Tutar does not include user accounts,
-          memberships, subscriptions, or in-app purchases. Tutar does not
-          request, process, or store credit card or debit card information.
-        </p>
-
-        <h2>8. Feedback and email</h2>
-
-        <p>
-          If the user chooses to use the in-app feedback feature, Tutar may open
-          the device’s default email application with a prepared email draft.
-          The message is transmitted only after the user reviews and sends it.
+          RevenueCat may initialize when the iOS app opens to check
+          subscription status; its processing is not limited to the
+          moment you make a purchase. It may process a randomly generated
+          app user identifier, purchase receipts/transaction information,
+          product and subscription status, validity dates, and app and
+          operating-system information needed to provide the service.
+          Purchase history may also be used for subscription analytics
+          and reporting.
         </p>
 
         <p>
-          If permitted by the user, the feedback draft may include technical
-          information such as the app version, operating system version,
-          platform, and device model. This information is not sent
-          automatically. Transmission takes place through the user’s email
-          application and email provider.
-        </p>
-
-        <h2>9. Operating system backups</h2>
-
-        <p>
-          Tutar does not transmit application data to developer-operated
-          servers. However, depending on the device’s backup settings, local
-          application data may be included in system backups provided by Google
-          or Apple.
+          Your reminder titles, photos, and attached links are not sent to
+          RevenueCat. RemDo does not receive or store your credit or debit
+          card number; payment information is handled by Apple.
         </p>
 
         <p>
-          System backups are subject to the terms and privacy policies of
-          Google, Apple, and the backup service selected on the device.
-        </p>
-
-        <h2>10. Data retention and deletion</h2>
-
-        <p>
-          Application data may remain on the device until it is deleted by the
-          user or the application is removed.
+          <strong>Android:</strong> In version 1.0.0 available as of this
+          policy’s update date, purchasing/subscription services through
+          Google Play Billing and RevenueCat are not active. In-app
+          subscription purchases are not offered in that version.
         </p>
 
         <p>
-          Users can delete expenses, undo statement imports, export their data,
-          or reset application data from within the app. Removing the
-          application deletes local app data, although previously created
-          system backups may remain subject to the operating system’s backup
-          policies.
+          Provider information:
+          <a href="https://www.apple.com/legal/privacy/">
+            Apple Privacy Policy
+          </a>
+          and
+          <a href="https://www.revenuecat.com/privacy/">
+            RevenueCat Privacy Policy
+          </a>.
         </p>
 
-        <h2>11. Third-party and system services</h2>
+        <h2>7. Trial usage counter and local Premium cache</h2>
 
         <p>
-          Tutar may interact with the following system services:
+          To apply the free feature-trial limit, the number of reminders
+          created under the trial is stored on your device. This counter
+          does not contain reminder text.
         </p>
 
-        <ul>
-          <li>Android or iOS speech recognition services</li>
-          <li>Android and iOS system file pickers</li>
-          <li>Google Play and Apple App Store services</li>
-          <li>Optional device backup services provided by Google or Apple</li>
-          <li>The external email application and email provider selected by the user</li>
-        </ul>
-
         <p>
-          Information processed by these services is subject to the privacy
-          policies of the relevant service providers.
+          On iOS, trial usage is stored in the secure Keychain and may
+          remain after you uninstall and reinstall the app. On Android,
+          the counter is stored in local app preferences. Premium access
+          information may be cached on the device so the app can evaluate
+          offline access.
         </p>
 
-        <h2>12. Children’s privacy</h2>
+        <h2>8. Advertising, analytics, and tracking</h2>
 
         <p>
-          Tutar is designed for users aged 18 and over and is not directed at
-          children. The application does not intentionally seek to collect
-          personal information from children.
+          RemDo does not display advertising, use an advertising identifier
+          for ad targeting, or track users across apps or websites for
+          advertising.
+        </p>
+
+        <p>
+          The app does not use Firebase Analytics, Google Analytics, or
+          similar general user-behavior tracking tools. RevenueCat’s iOS
+          subscription validation and purchase analytics/reporting are
+          described separately in section 6.
+        </p>
+
+        <h2>9. Support and email feedback</h2>
+
+        <p>
+          Settings → Support → “Contact support by email” opens a draft in
+          your device’s email app, addressed to
+          <a href="mailto:ibrahim.buu@gmail.com?subject=RemDo%20Support">
+            ibrahim.buu@gmail.com
+          </a>
+          with the subject “RemDo Support”. RemDo does not send the message
+          automatically.
+        </p>
+
+        <p>
+          The current version does not automatically attach your device
+          model, operating-system version, or reminder records. If you
+          send the message, your email address, message content, and any
+          files you choose to attach are processed by the developer and
+          email service providers to respond to your support request.
+          Avoid including unnecessary personal information or private
+          reminder content.
+        </p>
+
+        <h2>10. External links</h2>
+
+        <p>
+          Tapping a web link attached to a reminder opens it in your device’s
+          external browser. Any processing of IP addresses, cookies, or
+          other data by the visited website is subject to that website’s
+          and the browser provider’s privacy practices. RemDo does not
+          control those websites or their data practices.
+        </p>
+
+        <h2>11. Operating-system backups</h2>
+
+        <p>
+          RemDo does not provide its own cloud synchronization or backup
+          service. However, depending on your device and account settings,
+          local app data may be included in system backups provided by
+          Apple, Google, or your device manufacturer and may subsequently
+          be restored.
+        </p>
+
+        <p>
+          Retention, deletion, and processing of system backups are governed
+          by the relevant provider’s policies and the backup settings you
+          choose.
+        </p>
+
+        <h2>12. Data retention and deletion</h2>
+
+        <p>
+          Active and completed reminders may remain on your device until
+          you delete them. Deleting a reminder removes its record,
+          scheduled notifications, and app-stored photo copies that are
+          not used by another reminder.
+        </p>
+
+        <p>
+          Uninstalling the app removes local app data managed by the
+          operating system. Previously created system backups and the
+          iOS Keychain trial counter may remain. Deleting the app does
+          not cancel an Apple subscription; manage your subscription
+          in your Apple account’s subscription settings.
+        </p>
+
+        <p>
+          Support correspondence may be retained for as long as needed to
+          resolve your request, complete necessary follow-up, and meet
+          any applicable legal obligations. Purchase records held by
+          Apple and RevenueCat are separate from local reminders; their
+          retention is subject to the relevant service and legal
+          requirements.
+        </p>
+
+        <p>
+          For a deletion request concerning support data held by the
+          developer or data transmitted to the iOS subscription service,
+          contact
+          <a href="mailto:ibrahim.buu@gmail.com">
+            ibrahim.buu@gmail.com
+          </a>.
+          Limited information may be requested to match your request to
+          the correct records. The developer does not have remote access
+          to reminders stored on your device.
         </p>
 
         <h2>13. Data security</h2>
 
         <p>
-          Tutar seeks to reduce unnecessary data transmission by keeping user
-          data on the device. However, no method of electronic storage can
-          guarantee absolute security. Users are encouraged to appropriately
-          manage device security, screen locking, and system backup settings.
-        </p>
-
-        <h2>14. Managing permissions</h2>
-
-        <p>
-          System permissions such as microphone access can be viewed and
-          revoked through the device settings. If microphone permission is not
-          granted, users can continue adding expenses manually.
-        </p>
-
-        <h2>15. Changes to this Privacy Policy</h2>
-
-        <p>
-          This Privacy Policy may be updated if Tutar’s features or data
-          practices change. The latest version will be published on this page,
-          and the “Last updated” date will be revised.
-        </p>
-
-        <h2>16. Contact</h2>
-
-        <p>
-          For questions about this Privacy Policy or Tutar’s data practices:
+          RemDo stores local data in the operating system’s app-specific
+          storage and uses the Keychain for the iOS trial counter. The
+          local reminder database has no additional app-specific
+          encryption layer; device screen locks, disk protection, and
+          app storage safeguards are important. No electronic storage
+          method guarantees absolute security.
         </p>
 
         <p>
-          Email:
-          <a href="mailto:tutarapp.support@gmail.com">
-            tutarapp.support@gmail.com
+          Network operations such as subscription validation use the
+          relevant providers’ secure connections. External providers may
+          process information outside your country according to the
+          location of their infrastructure. Details are available in
+          their privacy notices.
+        </p>
+
+        <h2>14. Your choices, permissions, and privacy requests</h2>
+
+        <p>
+          You can manage photo access, notifications, exact alarms, and
+          Siri/Shortcuts access through device permission and app settings.
+          Restricting permissions may affect the related features; you
+          can continue managing basic reminder records manually.
+        </p>
+
+        <p>
+          Send requests for access, correction, deletion, or other privacy
+          rights under applicable law to the contact address below.
+          RemDo does not create a user account, so there is no separate
+          RemDo account to close in the app. Support information you
+          provide and subscription records held by third-party services
+          may require separate processes.
+        </p>
+
+        <h2>15. Children’s privacy</h2>
+
+        <p>
+          RemDo’s core features do not require an account or identity
+          information. If you are a parent or guardian and believe your
+          child has shared personal information through the support
+          channel, contact us so that it can be reviewed and removed as
+          appropriate.
+        </p>
+
+        <h2>16. Changes to this policy</h2>
+
+        <p>
+          This policy may be updated when RemDo’s features, service
+          providers, or data practices change. The current version is
+          provided on this page and the last-updated date is revised
+          accordingly.
+        </p>
+
+        <h2>17. Contact</h2>
+
+        <p>
+          Application and privacy contact:
+          <strong>RemDo developer</strong>
+        </p>
+
+        <p>
+          For questions about this policy, support data, or privacy requests:
+          <a href="mailto:ibrahim.buu@gmail.com?subject=RemDo%20Privacy">
+            ibrahim.buu@gmail.com
           </a>
         </p>
 
         <div class="notice">
-          Tutar does not use user accounts, advertising, advertising
-          identifiers, developer-operated servers, or third-party analytics.
+          <p>
+            <strong>Summary:</strong> Your reminder content and photos
+            remain on your device. Apple and RevenueCat are used for iOS
+            subscription validation and purchase analytics. Support email
+            is transmitted only when you send it.
+          </p>
         </div>
       </section>
     </div>
 
-    <footer>
-      © 2026 Tutar. Tüm hakları saklıdır.
+    <footer id="pageFooter">
+      © 2026 RemDo. Tüm hakları saklıdır.
     </footer>
   </main>
 
   <script>
-    function showLanguage(language) {
-      const turkishSection = document.getElementById("tr");
-      const englishSection = document.getElementById("en");
-      const turkishButton = document.getElementById("trButton");
-      const englishButton = document.getElementById("enButton");
-      const pageTitle = document.getElementById("pageTitle");
-      const lastUpdated = document.getElementById("lastUpdated");
-
+    function showLanguage(language, updateHash = true) {
       const isEnglish = language === "en";
 
-      turkishSection.classList.toggle("active", !isEnglish);
-      englishSection.classList.toggle("active", isEnglish);
-      turkishButton.classList.toggle("active", !isEnglish);
-      englishButton.classList.toggle("active", isEnglish);
+      for (const lang of ["tr", "en"]) {
+        const active = (lang === "en") === isEnglish;
+        const section = document.getElementById(lang);
+        const button = document.getElementById(lang + "Button");
+
+        section.classList.toggle("active", active);
+        section.hidden = !active;
+
+        button.classList.toggle("active", active);
+        button.setAttribute("aria-pressed", String(active));
+      }
 
       document.documentElement.lang = isEnglish ? "en" : "tr";
-      document.title = isEnglish
-        ? "Tutar - Privacy Policy"
-        : "Tutar - Gizlilik Politikası";
 
-      pageTitle.textContent = isEnglish
+      document.title = isEnglish
+        ? "RemDo — Privacy Policy"
+        : "RemDo — Gizlilik Politikası";
+
+      document.getElementById("pageTitle").textContent = isEnglish
         ? "Privacy Policy"
         : "Gizlilik Politikası";
 
-      lastUpdated.textContent = isEnglish
-        ? "Last updated: September 24, 2026"
-        : "Son güncelleme: 24 Eylül 2026";
+      document.getElementById("lastUpdated").textContent = isEnglish
+        ? "Last updated: October 21, 2026"
+        : "Son güncelleme: 21 Ekim 2026";
+
+      document.getElementById("pageFooter").textContent = isEnglish
+        ? "© 2026 RemDo. All rights reserved."
+        : "© 2026 RemDo. Tüm hakları saklıdır.";
+
+      if (updateHash) {
+        try {
+          history.replaceState(null, "", isEnglish ? "#en" : "#tr");
+        } catch {
+          // Sayfa yerel dosya olarak açıldığında da çalışmaya devam eder.
+        }
+      }
     }
+
+    showLanguage(location.hash === "#en" ? "en" : "tr", false);
+
+    window.addEventListener("hashchange", function () {
+      showLanguage(location.hash === "#en" ? "en" : "tr", false);
+    });
   </script>
 </body>
 </html>
-```
