@@ -1,26 +1,21 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta
-    name="description"
-    content="Tutar Gizlilik Politikası / Tutar Privacy Policy — harcama kayıtları, banka ekstresi içe aktarma, sesle giriş ve cihazda saklama hakkında."
-  />
-  <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#705dea" />
-
-  <title>Tutar — Gizlilik Politikası</title>
-
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="RemDo Gizlilik Politikası / RemDo Privacy Policy — hatırlatmalar, fotoğraf ekleri, bildirimler, Siri ve Premium abonelik bilgileri." name="description"/>
+<meta content="index, follow" name="robots"/>
+<meta content="#087A78" name="theme-color"/>
+<title>RemDo — Gizlilik Politikası</title>
+<style>
     :root {
-      --background: #f7f8fc;
+      --background: #FAF8F4;
       --card: #ffffff;
-      --text: #171e31;
-      --muted: #667085;
-      --border: #e6e8f0;
-      --accent: #5a46d6;
-      --accent-soft: #efebff;
+      --text: #10202D;
+      --muted: #667482;
+      --border: #E5E7E5;
+      --accent: #087A78;
+      --accent-soft: #DDF3EF;
     }
 
     * { box-sizing: border-box; }
@@ -78,7 +73,7 @@
     }
 
     a:hover { text-decoration-thickness: 2px; }
-    :focus-visible { outline: 3px solid #705dea; outline-offset: 4px; }
+    :focus-visible { outline: 3px solid #087A78; outline-offset: 4px; }
     .muted { color: var(--muted); }
 
     .language-switcher {
@@ -137,487 +132,129 @@
       .language-switcher { display: none; }
     }
   </style>
-
-  <noscript>
-    <style>
+<noscript>
+<style>
       .section { display: block !important; }
       .language-switcher { display: none; }
       #en { margin-top: 64px; border-top: 1px solid #e6e8f0; padding-top: 32px; }
       #en::before { content: "Privacy Policy · English"; font-size: 32px; font-weight: 700; }
     </style>
-  </noscript>
+</noscript>
 </head>
-
 <body>
-  <main class="container">
-    <div class="card">
-      <header class="header">
-        <div class="app-name">Tutar</div>
-        <h1 id="pageTitle">Gizlilik Politikası</h1>
-        <p id="lastUpdated" class="muted">Son güncelleme: 26 Ekim 2026</p>
-      </header>
-
-      <div class="language-switcher" role="group" aria-label="Dil seçimi / Language selection">
-        <button id="trButton" class="active" type="button" aria-pressed="true" aria-controls="tr" onclick="showLanguage('tr')">Türkçe</button>
-        <button id="enButton" type="button" aria-pressed="false" aria-controls="en" onclick="showLanguage('en')">English</button>
-      </div>
-
-      <section id="tr" lang="tr" class="section active" aria-labelledby="pageTitle">
-        <h2>1. Genel yaklaşım</h2>
-        <p>
-          Tutar, harcamalarınızı kaydetmenize, özetlemenize ve banka ekstresi
-          dosyalarını incelemenize yardımcı olan bir mobil uygulamadır. Bu
-          politika, Tutar'ın Android ve iOS sürümlerinde hangi bilgilerin
-          işlendiğini, nerede saklandığını ve hangi tercihlere sahip olduğunuzu
-          açıklar.
-        </p>
-        <p>
-          Tutar hesabı açmanız veya ad, telefon numarası gibi kimlik bilgileri
-          vermeniz gerekmez. Harcama kayıtları ve banka ekstresi işleme temel
-          olarak cihazınızda gerçekleşir. Tutar geliştiricisi, bu verileri alan
-          bir kullanıcı hesabı sunucusu, finansal veri sunucusu veya bulut
-          eşitleme hizmeti işletmez. Bununla birlikte ses tanıma, işletim sistemi
-          yedekleri, dosya sağlayıcıları ve e-posta uygulaması gibi seçtiğiniz
-          platform özellikleri kendi hizmet sağlayıcıları tarafından işlenebilir;
-          ayrıntılar aşağıda açıklanmıştır.
-        </p>
-
-        <h2>2. Cihazınızda saklanan bilgiler</h2>
-        <p>
-          Tutar'ın özelliklerini sunmak için girdiğiniz veya uygulama içinde
-          oluşturduğunuz bilgiler, cihazınızdaki uygulamaya özel yerel veritabanı
-          ve ayar alanlarında saklanabilir. Bunlar şunları içerebilir:
-        </p>
-        <ul>
-          <li>Harcama, iade ve ödeme kayıtları; tutar, para birimi, tarih, açıklama, kategori ve kaynak bilgileri.</li>
-          <li>Taksit ve düzenli ödeme kayıtları ile hatırlatıcı tercihleri.</li>
-          <li>İçe aktardığınız ekstrelerden onaylayarak oluşturduğunuz işlem satırları, içe aktarma ve yinelenen kayıt kontrol bilgileri.</li>
-          <li>Kendi kategorileriniz, işyeri eşleştirme kurallarınız, ekstre dönemi tercihleri ve uygulama ayarları.</li>
-        </ul>
-        <p>
-          Ana ekran widget'larının çalışması için gerekli sınırlı özet bilgiler
-          (örneğin seçili dönemin toplamı, işlem sayısı ve para birimi) işletim
-          sisteminin uygulamalar arası özel alanında tutulabilir. Tutar, tam
-          SQLite veritabanını widget ile paylaşmaz.
-        </p>
-
-        <h2>3. Banka ekstreleri ve dosyalar</h2>
-        <p>
-          PDF ekstreyi siz seçersiniz. Desteklenen ekstreler Tutar tarafından
-          cihazınızda analiz edilir; PDF içeriği Tutar geliştiricisinin
-          sunucularına gönderilmez. İnceleme ekranında kabul ettiğiniz satırlar
-          yerel veritabanına eklenir. Uygulama, ekstre dosyasını kalıcı bir arşiv
-          olarak saklamaz; yinelenen içe aktarmayı önleme ve içe aktarmayı yönetme
-          amacıyla sınırlı teknik tanımlayıcıları tutabilir.
-        </p>
-        <p>
-          Dosya seçerken işletim sisteminin dosya seçicisi veya seçtiğiniz iCloud,
-          Google Drive ya da başka bir dosya sağlayıcısı devreye girebilir. Bu
-          sağlayıcıların dosya erişimi ve veri işlemesi kendi gizlilik
-          politikalarına tabidir. Tutar banka hesabınıza bağlanmaz, banka giriş
-          bilgilerinizi istemez ve bankanıza işlem göndermez.
-        </p>
-
-        <h2>4. Mikrofon, konuşma tanıma ve Siri</h2>
-        <p>
-          Sesle harcama girişi veya iOS Denetim Merkezi'nden hızlı kayıt
-          başlattığınızda mikrofon kullanılır. Standart sesli girişte Tutar,
-          konuşmayı tanıma için işletim sisteminin konuşma tanıma hizmetini
-          kullanır. Sesin cihazda mı yoksa Apple'ın veya Android cihazınızdaki
-          tanıma sağlayıcısının hizmetlerinde mi işlendiği; iOS sürümüne,
-          kullanılabilir modele, cihaz ayarlarına ve platformun uygulamasına
-          bağlı olabilir. Android'de Tutar cihaz üstü tanımayı talep eder; bu
-          desteklenmiyorsa sesle tanıma kullanılamayabilir.
-        </p>
-        <p>
-          iOS 26'daki konuşma analiz aracı ve Denetim Merkezi hızlı kayıt akışı,
-          desteklenen durumda cihaz üstü tanımayı kullanır. Denetim Merkezi hızlı
-          kayıt ses dosyası inceleme veya iptal için beklerken cihazdaki Tutar
-          uygulama alanında geçici olarak bulunabilir; tamamlandığında veya iptal
-          edildiğinde silinir. Kullanılmayan kayıt isteği süresi dolduğunda
-          temizlenir. Normal sesli girişte Tutar ham ses kaydını kalıcı olarak
-          saklamaz; tanınan metin siz kaydetmeyi onaylarsanız harcama açıklaması
-          olarak yerel veritabanına yazılabilir.
-        </p>
-        <p>
-          Siri veya Kestirmeler ile eklediğiniz harcama istekleri Apple'ın Siri
-          hizmetleri üzerinden işlenebilir. Apple'ın bu isteklerle ilgili
-          işlemleri Siri ayarlarınıza ve Apple'ın gizlilik uygulamalarına
-          tabidir. Tutar'a iletilen harcama bilgileri Tutar'ın yerel kayıt
-          akışında işlenir.
-        </p>
-        <p>
-          Konuşma tanıma sağlayıcıları hakkında bilgi için
-          <a href="https://www.apple.com/legal/privacy/">Apple Gizlilik Politikası</a>
-          ve
-          <a href="https://policies.google.com/privacy?hl=tr">Google Gizlilik Politikası</a>
-          sayfalarına bakabilirsiniz. Android cihaz üreticisinin konuşma hizmeti
-          farklıysa onun gizlilik açıklaması geçerlidir.
-        </p>
-
-        <h2>5. Widget'lar ve yerel bildirimler</h2>
-        <p>
-          Widget'lar, ana ekranda seçili ekstre dönemine ait özetinizi gösterebilir.
-          Düzenli ödeme hatırlatıcılarını etkinleştirirseniz Tutar bunları
-          cihazınızda yerel bildirim olarak zamanlar; bildirim metninde ödeme adı
-          veya tutar bulunabilir. Tutar, bu hatırlatıcılar için kendi uzak bildirim
-          sunucusunu kullanmaz. Widget ve bildirim içeriğinin kilit ekranında
-          görünürlüğünü işletim sisteminizin ayarlarından yönetebilirsiniz.
-        </p>
-
-        <h2>6. Yedekleme ve dışa aktarma</h2>
-        <p>
-          Tutar kendi çevrim içi yedekleme veya eşitleme hizmetini sunmaz. Uygulama
-          içinden istediğinizde JSON yedeği oluşturabilir veya seçtiğiniz harcama
-          kayıtlarını CSV dosyası olarak dışa aktarabilirsiniz. Dosyanın nereye
-          kaydedileceğini siz seçersiniz. Dışa aktarılan dosyalar Tutar'ın yerel
-          veritabanından ayrı kopyalardır; bu kopyaları ve paylaştığınız hedefi
-          yönetmek size aittir.
-        </p>
-        <p>
-          Cihaz ve hesap ayarlarınıza bağlı olarak uygulama verileri Apple iCloud,
-          Google veya cihaz üreticinizin sistem yedeklemesine dahil olabilir.
-          Yedeklerin saklanması, geri yüklenmesi ve silinmesi ilgili sağlayıcının
-          kurallarına ve sizin ayarlarınıza tabidir.
-        </p>
-
-        <h2>7. Reklam, analiz ve çevrim içi hizmetler</h2>
-        <p>
-          Tutar reklam göstermez ve uygulamalar arası reklam takibi yapmaz.
-          Uygulamada genel kullanıcı davranışını izleyen bir analitik SDK'sı veya
-          Tutar'a ait bir finansal veri sunucusu bulunmaz. Tutar, bankanızdan
-          veri çekmez ve bankacılık işlemi gerçekleştirmez.
-        </p>
-        <p>
-          Konuşma tanıma, Siri, sistem yedeklemesi, işletim sistemi mağazasındaki
-          uygulamayı değerlendirme arayüzü, dosya sağlayıcısı ve e-posta
-          uygulaması gibi özellikler ilgili platform hizmetleriyle iletişim
-          kurabilir. Bu sağlayıcıların işlediği bilgiler onların şartları ve
-          gizlilik politikaları kapsamındadır. Tutar bu sağlayıcılara harcama
-          veritabanınızı gönderen bir eşitleme veya analiz servisi çalıştırmaz.
-        </p>
-
-        <h2>8. Destek ve e-posta</h2>
-        <p>
-          Ayarlar'daki geri bildirim özelliği, cihazınızdaki e-posta uygulamasında
-          bir taslak açar. Tutar e-postayı kendiliğinden göndermez. Taslak,
-          yazdığınız mesajı ve tercih ederseniz uygulama sürümü, işletim sistemi,
-          platform ve cihaz modeli gibi teknik bilgileri içerebilir. Harcama,
-          kart veya ekstre bilgilerinizi eklememeniz önerilir. E-postayı
-          gönderirseniz mesajınız, e-posta sağlayıcınız ve Tutar destek adresini
-          yöneten kişi tarafından destek talebinizi yanıtlamak için işlenir.
-        </p>
-        <p>
-          Destek ve gizlilik talepleri için
-          <a href="mailto:ibrahim.buu@gmail.com?subject=Tutar%20Gizlilik">ibrahim.buu@gmail.com</a>
-          adresine yazabilirsiniz. Uygulama mevcut sürümde harcama kayıtlarınızı,
-          ses kayıtlarınızı veya ekstrelerinizi destek e-postasına otomatik olarak
-          eklemez.
-        </p>
-
-        <h2>9. Saklama ve silme</h2>
-        <p>
-          Yerel kayıtlar siz uygulama içinden silene veya uygulama verilerini
-          temizleyene kadar cihazınızda kalır. Tutar hesabı olmadığı için
-          geliştiricinin cihazınızdaki kayıtları uzaktan görüntüleme veya silme
-          olanağı yoktur. Uygulamayı kaldırmak genellikle uygulama alanındaki
-          yerel verileri kaldırır; ancak önceden oluşturulmuş sistem yedekleri ve
-          dışa aktardığınız dosyalar ayrıca kalabilir.
-        </p>
-        <p>
-          Destek e-postası gönderirseniz, yazışmanız talebi yanıtlamak, gerekli
-          takip işlemlerini yapmak ve uygulanabilir yasal yükümlülükleri yerine
-          getirmek için gerektiği süre boyunca saklanabilir. Geliştiriciye e-posta
-          ile ilettiğiniz kişisel bilgiler hakkındaki taleplerinizi aynı destek
-          adresine gönderebilirsiniz.
-        </p>
-
-        <h2>10. Veri güvenliği</h2>
-        <p>
-          Tutar kayıtları işletim sisteminin uygulamaya özel alanında saklanır.
-          Yerel veritabanı için Tutar'a özgü ek bir şifreleme katmanı yoktur;
-          cihaz kilidi, işletim sisteminin güvenlik özellikleri ve cihazınızı
-          güncel tutmanız önemlidir. Hiçbir saklama veya aktarım yöntemi mutlak
-          güvenlik garantisi vermez. E-posta, Siri, konuşma tanıma, dosya
-          sağlayıcısı ve sistem yedekleri gibi üçüncü taraf hizmetleri kendi
-          güvenlik kontrollerinden sorumludur.
-        </p>
-
-        <h2>11. Tercihleriniz ve gizlilik talepleri</h2>
-        <p>
-          Mikrofon, bildirim, Siri, widget, sistem yedeklemesi ve dosya erişimi
-          tercihlerinizi cihazınızın ve ilgili özelliğin ayarlarından
-          yönetebilirsiniz. İzinleri kapatmanız ilgili özelliği sınırlayabilir;
-          harcamaları elle kaydetmeye devam edebilirsiniz. Yerel finansal
-          kayıtlarınızı uygulama içinden görüntüleyebilir, dışa aktarabilir veya
-          silebilirsiniz.
-        </p>
-        <p>
-          Uygulanabilir mevzuat kapsamındaki taleplerinizi bize iletebilirsiniz.
-          Tutar'da ayrı bir kullanıcı hesabı bulunmaz. Geliştirici cihazınızda
-          kalan yerel verileri uzaktan alamaz; bu verileri cihazınızdan
-          yönetebilirsiniz.
-        </p>
-
-        <h2>12. Çocukların gizliliği</h2>
-        <p>
-          Geliştirici çocuklardan bilerek kişisel bilgi toplamayı amaçlamaz.
-          Tutar'da kullanıcı hesabı veya çevrim içi profil bulunmaz. Bir çocuğun
-          destek kanalı üzerinden kişisel bilgi gönderdiğini düşünüyorsanız
-          inceleme için bize ulaşın.
-        </p>
-
-        <h2>13. Bu politikadaki değişiklikler</h2>
-        <p>
-          Özellikler veya veri işleme biçimleri değişirse bu politika
-          güncellenebilir. Güncel metin bu sayfada yayımlanır ve son güncelleme
-          tarihi değiştirilir.
-        </p>
-
-        <h2>14. İletişim</h2>
-        <p>
-          Bu politika, destek verileri veya gizlilik talepleri hakkında sorularınız
-          için Tutar geliştiricisine
-          <a href="mailto:ibrahim.buu@gmail.com?subject=Tutar%20Gizlilik">ibrahim.buu@gmail.com</a>
-          adresinden ulaşabilirsiniz.
-        </p>
-
-        <div class="notice">
-          <p>
-            <strong>Özet:</strong> Harcama kayıtları ve PDF ekstre analizi cihazınızda
-            işlenir. Tutar hesabı, kendi bulut yedeği, reklam veya analitik SDK'sı
-            kullanmaz. Ses tanıma ve Siri gibi seçtiğiniz platform özellikleri
-            kendi sağlayıcılarının gizlilik uygulamalarına tabi olabilir.
-          </p>
-        </div>
-      </section>
-
-      <section id="en" lang="en" class="section" hidden>
-        <h2>1. Overview</h2>
-        <p>
-          Tutar is a mobile app for recording and reviewing expenses, summaries,
-          and bank statement files. This policy explains what information Tutar
-          processes on Android and iOS, where it is stored, and the choices
-          available to you.
-        </p>
-        <p>
-          You do not need a Tutar account or need to provide identity details such
-          as your name or phone number. Expense records and bank statement
-          processing primarily stay on your device. The Tutar developer does not
-          operate an account server, financial-data server, or cloud-sync service
-          that receives these records. Platform features you choose, such as
-          speech recognition, operating-system backups, file providers, and email apps,
-          may be processed by their providers as described below.
-        </p>
-
-        <h2>2. Information stored on your device</h2>
-        <p>
-          Information you enter or create in Tutar may be stored in the app's
-          local database and settings area to provide its features. This can
-          include:
-        </p>
-        <ul>
-          <li>Expense, refund, and payment records, including amounts, currencies, dates, descriptions, categories, and source details.</li>
-          <li>Installment and recurring-payment records and reminder preferences.</li>
-          <li>Transaction rows you approve from imported statements, plus import and duplicate-detection information.</li>
-          <li>Your categories, merchant-matching rules, statement-period preferences, and app settings.</li>
-        </ul>
-        <p>
-          A limited summary needed for home-screen widgets, such as the selected
-          period total, transaction count, and currency, may be stored in the
-          operating system's private shared-app area. Tutar does not share the
-          full SQLite database with its widgets.
-        </p>
-
-        <h2>3. Bank statements and files</h2>
-        <p>
-          You choose the PDF statement to import. Tutar analyzes supported
-          statements on your device and does not send PDF contents to servers
-          operated by the Tutar developer. Rows you approve in the review screen
-          are added to the local database. The app does not keep the statement as
-          a permanent archive; it may keep limited technical identifiers to
-          prevent duplicate imports and manage an import.
-        </p>
-        <p>
-          The operating-system file picker or a file provider you choose, such as
-          iCloud, Google Drive, or another provider, may be involved when you
-          select a file. Their access and processing are governed by their own
-          privacy policies. Tutar does not connect to your bank, ask for your
-          online banking credentials, or send transactions to your bank.
-        </p>
-
-        <h2>4. Microphone, speech recognition, and Siri</h2>
-        <p>
-          The microphone is used when you start voice expense entry or a quick
-          recording from iOS Control Center. For standard voice entry, Tutar uses
-          the operating system's speech-recognition service. Whether speech is
-          processed on the device or by Apple or the speech-recognition provider
-          on your Android device can depend on your iOS version, available model,
-          device settings, and platform implementation. On Android, Tutar requests
-          on-device recognition; voice recognition may be unavailable if that is
-          not supported.
-        </p>
-        <p>
-          The iOS 26 speech analyzer and Control Center quick-recording flow use
-          on-device recognition where supported. A Control Center quick-recording
-          audio file may be held temporarily in Tutar's app-specific device
-          storage while it awaits review or cancellation; it is deleted when the
-          capture is completed or cancelled. An unused capture request is cleared
-          after it expires. Tutar does not permanently store raw audio from
-          standard voice entry. If you confirm saving, recognized text may be
-          stored locally as an expense description.
-        </p>
-        <p>
-          Expense requests made with Siri or Shortcuts may be processed through
-          Apple's Siri services. Apple's handling of those requests is subject to
-          your Siri settings and Apple's privacy practices. Expense information
-          passed to Tutar is handled by Tutar's local recording flow.
-        </p>
-        <p>
-          For information about speech-service providers, see the
-          <a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a>
-          and
-          <a href="https://policies.google.com/privacy?hl=en">Google Privacy Policy</a>.
-          If your Android device uses a different speech provider, that provider's
-          privacy notice applies.
-        </p>
-
-        <h2>5. Widgets and local notifications</h2>
-        <p>
-          Widgets may show a summary for your selected statement period. If you
-          enable recurring-payment reminders, Tutar schedules them as local
-          notifications on your device; a notification may contain the payment
-          name or amount. Tutar does not use its own remote notification server
-          for these reminders. You can control whether widget and notification
-          content appears on your lock screen in your operating-system settings.
-        </p>
-
-        <h2>6. Backups and exports</h2>
-        <p>
-          Tutar does not provide its own online backup or sync service. When you
-          choose, you can create a JSON backup or export selected expense records
-          as a CSV file. You choose where to save the file. Exported files are
-          copies separate from Tutar's local database; you are responsible for
-          managing those copies and their destination.
-        </p>
-        <p>
-          Depending on your device and account settings, app data may be included
-          in Apple iCloud, Google, or your device manufacturer's system backups.
-          The relevant provider's terms and your settings govern how those
-          backups are stored, restored, and deleted.
-        </p>
-
-        <h2>7. Advertising, analytics, and online services</h2>
-        <p>
-          Tutar does not display ads or track you across apps for advertising.
-          The app does not include a general user-behavior analytics SDK or a
-          financial-data server operated by Tutar. Tutar does not retrieve data
-          from your bank or perform banking transactions.
-        </p>
-        <p>
-          Features such as speech recognition, Siri, system backups, the app
-          review interface provided by the operating-system store, file providers,
-          and email apps may communicate with their respective platform services.
-          Those providers' processing is governed by their terms and privacy
-          policies. Tutar does not run a sync or analytics service that sends your
-          expense database to those providers.
-        </p>
-
-        <h2>8. Support and email</h2>
-        <p>
-          The feedback feature in Settings opens a draft in your device's email
-          app. Tutar does not send it automatically. The draft contains your
-          message and, if you choose, technical information such as the app
-          version, operating system, platform, and device model. We recommend that
-          you do not include expense, card, or statement details. If you send the
-          email, your message is processed by your email provider and the person
-          managing Tutar's support address to respond to your request.
-        </p>
-        <p>
-          For support and privacy requests, contact
-          <a href="mailto:ibrahim.buu@gmail.com?subject=Tutar%20Privacy">ibrahim.buu@gmail.com</a>.
-          In the current version, Tutar does not automatically attach your expense
-          records, audio recordings, or statements to support email.
-        </p>
-
-        <h2>9. Retention and deletion</h2>
-        <p>
-          Local records remain on your device until you delete them in the app or
-          clear app data. Because Tutar has no account, the developer cannot
-          remotely view or delete records on your device. Uninstalling the app
-          generally removes local data in the app's storage, but previously
-          created system backups and files you exported may remain separately.
-        </p>
-        <p>
-          If you send a support email, correspondence may be retained for as long
-          as needed to respond, follow up, and meet applicable legal obligations.
-          You may send requests concerning personal information you have emailed
-          to the developer to the same support address.
-        </p>
-
-        <h2>10. Data security</h2>
-        <p>
-          Tutar records are stored in the operating system's app-specific storage.
-          Tutar does not add a separate app-specific encryption layer to the
-          local database; a device passcode, operating-system security features,
-          and keeping your device up to date are important. No method of storage
-          or transmission can guarantee absolute security. Third-party services
-          such as email, Siri, speech recognition, file providers, and system
-          backups are responsible for their own security controls.
-        </p>
-
-        <h2>11. Your choices and privacy requests</h2>
-        <p>
-          You can manage microphone, notification, Siri, widget, system-backup,
-          and file-access choices in your device and feature settings. Turning off
-          permissions may limit the related feature; you can continue to enter
-          expenses manually. You can view, export, or delete local financial
-          records in the app.
-        </p>
-        <p>
-          You may contact us with requests under applicable law. Tutar has no
-          separate user account. The developer cannot retrieve local data that
-          remains on your device; you can manage that data on the device itself.
-        </p>
-
-        <h2>12. Children's privacy</h2>
-        <p>
-          The developer does not intentionally collect personal information
-          from children. Tutar has no user account or online profile. If you
-          believe a child has sent personal information through the support
-          channel, contact us so we can review it.
-        </p>
-
-        <h2>13. Changes to this policy</h2>
-        <p>
-          This policy may be updated if Tutar's features or data practices change.
-          The current text will be published on this page and the last-updated
-          date will be revised.
-        </p>
-
-        <h2>14. Contact</h2>
-        <p>
-          For questions about this policy, support data, or privacy requests,
-          contact the Tutar developer at
-          <a href="mailto:ibrahim.buu@gmail.com?subject=Tutar%20Privacy">ibrahim.buu@gmail.com</a>.
-        </p>
-
-        <div class="notice">
-          <p>
-            <strong>Summary:</strong> Expense records and PDF statement analysis
-            are processed on your device. Tutar has no account, its own cloud
-            backup, advertising, or analytics SDK. Platform features you choose,
-            such as speech recognition and Siri, may be subject to their
-            providers' privacy practices.
-          </p>
-        </div>
-      </section>
-    </div>
-
-    <footer id="pageFooter">© 2026 Tutar. Tüm hakları saklıdır.</footer>
-  </main>
-
-  <script>
+<main class="container">
+<div class="card">
+<header class="header">
+<div class="app-name">RemDo</div>
+<h1 id="pageTitle">Gizlilik Politikası</h1>
+<p class="muted" id="lastUpdated">Son güncelleme: 30 Ekim 2026</p>
+</header>
+<div aria-label="Dil seçimi / Language selection" class="language-switcher" role="group">
+<button aria-controls="tr" aria-pressed="true" class="active" id="trButton" onclick="showLanguage('tr')" type="button">Türkçe</button>
+<button aria-controls="en" aria-pressed="false" id="enButton" onclick="showLanguage('en')" type="button">English</button>
+</div>
+<section aria-labelledby="pageTitle" class="section active" id="tr" lang="tr">
+<h2>1. Genel yaklaşım</h2>
+<p>RemDo, hatırlatmalar oluşturmanıza, görevlerinizi takip etmenize ve seçtiğiniz aralıklarla yerel bildirimler almanıza yardımcı olan bir mobil uygulamadır. Bu politika, RemDo'nun iOS ve Android sürümlerinde hangi bilgilerin işlendiğini ve bunlar üzerindeki tercihlerinizi açıklar.</p>
+<p>RemDo'yu kullanmak için hesap açmanız veya adınızı, telefon numaranızı vermeniz gerekmez. Hatırlatma kayıtları temel olarak cihazınızda tutulur. RemDo geliştiricisi, hatırlatma verilerinizi eşitleyen bir sunucu ya da kullanıcı hesabı hizmeti işletmez. Ancak isteğe bağlı Siri ve Premium satın alma gibi özellikler ilgili hizmet sağlayıcılarıyla iletişim kurabilir.</p>
+<h2>2. Cihazınızda saklanan bilgiler</h2>
+<p>Uygulamanın çalışması için aşağıdaki veriler cihazınızdaki uygulamaya özel SQLite veritabanında veya ayar alanlarında saklanabilir:</p>
+<ul>
+<li>Hatırlatma başlıkları, tarih ve saatler, tamamlanma bilgileri.</li>
+<li>Tekrar seçenekleri, ısrar seviyeleri ve hatırlatma aralıkları.</li>
+<li>Hatırlatmalara eklediğiniz fotoğraf ve bağlantı bilgileri.</li>
+<li>Uygulama dili, Premium erişim durumu ve deneme hakkı bilgileri.</li>
+</ul>
+<p>Bu hatırlatma kayıtları, RemDo geliştiricisinin sunucularına otomatik olarak yüklenmez.</p>
+<h2>3. Fotoğraflar ve bağlantılar</h2>
+<p>Hatırlatmaya fotoğraf eklediğinizde, galeriden seçtiğiniz görselin bir kopyası cihazınızda RemDo'ya özel uygulama alanına kaydedilir. Fotoğrafın bağlı olduğu hatırlatma silindiğinde veya ek kaldırıldığında, dosya başka bir hatırlatma tarafından kullanılmıyorsa uygulama kopyası temizlenir.</p>
+<p>Eklediğiniz web bağlantıları hatırlatmanızla birlikte yerel olarak saklanır. Bağlantıya dokunduğunuzda cihazınızın varsayılan tarayıcısı açılır; ziyaret ettiğiniz sitenin veri işlemleri kendi gizlilik politikasına tabidir. RemDo fotoğraf eklerinizi bir geliştirici sunucusuna yüklemez.</p>
+<h2>4. Bildirimler</h2>
+<p>RemDo hatırlatmaları cihazınızda yerel bildirimler olarak planlar; bildirim göndermek için RemDo'ya ait bir uzak bildirim sunucusu kullanılmaz. Bildirimlerde hatırlatma başlığı gibi içerikler görünebilir. Desteklenen bildirim eylemleri arasında tamamlandı ve erteleme seçenekleri bulunur.</p>
+<p>Bildirim iznini ve kilit ekranında içerik gösterimini cihazınızın ayarlarından kontrol edebilirsiniz. İzni kapatırsanız hatırlatmalarınız saklanmaya devam edebilir ancak bildirim alamayabilirsiniz.</p>
+<h2>5. Siri ve Kestirmeler</h2>
+<p>iOS'ta Siri veya Kestirmeler üzerinden hızlı hatırlatma oluşturmayı seçerseniz sesli isteğiniz ve komutunuz Apple'ın Siri hizmetleri tarafından işlenebilir. Apple'ın bu işlemleri kendi gizlilik uygulamalarına ve cihazınızdaki Siri ayarlarına tabidir.</p>
+<p>RemDo'ya iletilen hatırlatma bilgileri, uygulamanın yerel kaydetme ve bildirim akışına aktarılır. Uygulamaya aktarılmayı bekleyen Siri istekleri cihazda geçici olarak tutulabilir. Ayrıntılar için <a href="https://www.apple.com/legal/privacy/" rel="noopener noreferrer" target="_blank">Apple Gizlilik Politikası</a>'na bakabilirsiniz.</p>
+<h2>6. Premium abonelikler ve deneme hakkı</h2>
+<p>RemDo bazı gelişmiş özellikleri ilk 7 yeni hatırlatmada deneme olanağı sunar. Bu kullanımın sayacı iOS'ta Keychain'de, Android'de yerel uygulama tercihleri alanında tutulur. iOS'taki deneme hakkı bilgisi, uygulamayı silip yeniden yükledikten sonra da cihazda kalabilir.</p>
+<p>iOS'ta aylık ve yıllık Premium abonelikler Apple App Store üzerinden sunulur ve abonelik erişimi RevenueCat altyapısıyla yönetilir. Satın alma işlemi ve abonelik durumunun doğrulanması sırasında Apple ve RevenueCat, işlem ve erişim yönetimi için gerekli teknik bilgileri kendi politikalarına göre işleyebilir. RemDo kredi kartı bilgilerinizi doğrudan toplamaz. Android sürümünde Premium satın alma entegrasyonu henüz etkin değildir.</p>
+<p>Ayrıntılar: <a href="https://www.apple.com/legal/privacy/" rel="noopener noreferrer" target="_blank">Apple Gizlilik Politikası</a> ve <a href="https://www.revenuecat.com/privacy/" rel="noopener noreferrer" target="_blank">RevenueCat Gizlilik Politikası</a>.</p>
+<h2>7. Reklam, analiz ve çevrim içi hizmetler</h2>
+<p>RemDo reklam göstermez, uygulamalar arası reklam takibi yapmaz ve genel kullanıcı davranışını izleyen bir analitik SDK'sı kullanmaz. Hatırlatmalarınızı eşitleyen bir RemDo bulut hizmeti bulunmaz.</p>
+<p>Premium abonelik doğrulaması, Siri, sistem yedeklemeleri ve açmayı tercih ettiğiniz web bağlantıları gibi özellikler ilgili üçüncü taraf sağlayıcılarla iletişime geçebilir. Bu sağlayıcıların işlediği bilgiler kendi gizlilik politikalarına tabidir.</p>
+<h2>8. Saklama alanı ve sistem yedekleri</h2>
+<p>Hatırlatma veritabanı ve fotoğraf ekleri cihazınızda uygulamaya özel alanda tutulur. RemDo kendi bulut eşitleme, hesap tabanlı yedekleme veya veri dışa aktarma hizmetini sunmaz.</p>
+<p>Cihaz ve hesap ayarlarınıza bağlı olarak bazı uygulama verileri Apple, Google veya cihaz üreticinizin sistem yedeklerine dahil olabilir. Bu yedeklerin yönetimi ve silinmesi ilgili hizmetin ayarlarına ve koşullarına tabidir.</p>
+<h2>9. Saklama ve silme</h2>
+<p>Hatırlatmalarınızı uygulama içinden düzenleyebilir ve silebilirsiniz. Silinen hatırlatmalara ait kullanılmayan yerel fotoğraf kopyaları da temizlenir. Uygulamayı kaldırmak genellikle hatırlatma veritabanını ve uygulamaya özel fotoğraf dosyalarını kaldırır; ancak işletim sistemi yedekleri ayrı olarak kalabilir.</p>
+<p>iOS Keychain'de saklanan deneme hakkı kayıtları, uygulama yeniden yüklendiğinde de korunabilir. Geliştirici cihazınızda saklanan hatırlatmalarınızı uzaktan görüntüleyemez veya silemez.</p>
+<h2>10. Veri güvenliği</h2>
+<p>RemDo kayıtları işletim sisteminin uygulamaya özel veri alanında saklanır. Yerel veritabanı için RemDo'ya özel ek bir şifreleme katmanı belgelenmemiştir; cihaz kilidi, güncel işletim sistemi ve cihaz güvenlik ayarları önemlidir. Hiçbir veri saklama veya aktarım yöntemi mutlak güvenlik garantisi vermez.</p>
+<h2>11. Destek ve e-posta</h2>
+<p>Destek almak için <a href="mailto:ibrahim.buu@gmail.com?subject=RemDo%20Gizlilik">ibrahim.buu@gmail.com</a> adresine yazabilirsiniz. E-posta gönderirseniz paylaştığınız mesaj ve iletişim bilgileriniz, destek talebinizi yanıtlamak ve gerekli işlemleri yürütmek için işlenebilir. Hatırlatma başlıklarınızı, fotoğraflarınızı veya başka hassas bilgileri e-postaya eklememenizi öneririz.</p>
+<p>Destek yazışmaları gerekli olduğu sürece ve geçerli yasal yükümlülükler çerçevesinde saklanabilir.</p>
+<h2>12. Tercihleriniz ve gizlilik talepleri</h2>
+<p>Bildirim, fotoğraf erişimi ve Siri gibi özelliklerin izinlerini cihazınızın ayarlarından yönetebilirsiniz. Hatırlatmalarınızı uygulama içinden görüntüleyebilir, değiştirebilir veya silebilirsiniz. Uygulanabilir gizlilik mevzuatı kapsamındaki taleplerinizi destek adresimize iletebilirsiniz.</p>
+<p>RemDo'da kullanıcı hesabı bulunmadığından geliştirici cihazınızdaki yerel kayıtları sizin adınıza uzaktan yönetemez.</p>
+<h2>13. Çocukların gizliliği</h2>
+<p>RemDo geliştiricisi çocuklardan bilerek kişisel bilgi toplamayı amaçlamaz. Uygulamada kullanıcı hesabı veya herkese açık profil bulunmaz. Bir çocuğun destek e-postası aracılığıyla kişisel bilgi ilettiğini düşünüyorsanız bizimle iletişime geçebilirsiniz.</p>
+<h2>14. Değişiklikler ve iletişim</h2>
+<p>RemDo'nun özellikleri veya veri işleme uygulamaları değişirse bu gizlilik politikası güncellenebilir. Güncel sürüm bu sayfada yayımlanır ve son güncelleme tarihi yenilenir. Sorularınız ve gizlilik talepleriniz için <a href="mailto:ibrahim.buu@gmail.com?subject=RemDo%20Gizlilik">ibrahim.buu@gmail.com</a> adresini kullanabilirsiniz.</p>
+<div class="notice"><p><strong>Özet:</strong> Hatırlatmalarınız ve fotoğraf ekleriniz temel olarak cihazınızda saklanır. RemDo hesap, reklam, analitik veya kendi bulut eşitleme hizmetini kullanmaz. Siri ile App Store/RevenueCat abonelik hizmetlerinin veri işlemleri ilgili sağlayıcılara tabidir.</p></div>
+</section>
+<section class="section" hidden="" id="en" lang="en">
+<h2>1. Overview</h2>
+<p>RemDo is a mobile app that helps you create reminders, track tasks and receive local notifications at selected intervals. This policy explains the information processed by RemDo on iOS and Android and the choices available to you.</p>
+<p>You do not need to create an account or provide your name or phone number to use RemDo. Reminder records are primarily stored on your device. The RemDo developer does not operate an account service or a server that syncs your reminder data. Optional features such as Siri and Premium purchases may communicate with their respective providers.</p>
+<h2>2. Information stored on your device</h2>
+<p>To provide its features, RemDo may store the following data in an app-specific local SQLite database or settings storage:</p>
+<ul>
+<li>Reminder titles, scheduled dates and times, and completion details.</li>
+<li>Recurrence settings, persistence levels and reminder intervals.</li>
+<li>Photo attachments and web-link information associated with reminders.</li>
+<li>App language, Premium access status and trial-usage information.</li>
+</ul>
+<p>These reminder records are not automatically uploaded to servers operated by the RemDo developer.</p>
+<h2>3. Photos and links</h2>
+<p>When you attach a photo to a reminder, a copy of the image you select from your gallery is stored in RemDo's private app storage on your device. When a reminder or attachment is removed, the app copy is deleted if no other reminder references it.</p>
+<p>Web links you attach are stored locally with your reminder. Opening a link launches your device's default browser; the destination website's privacy practices then apply. RemDo does not upload photo attachments to a developer-operated server.</p>
+<h2>4. Notifications</h2>
+<p>RemDo schedules reminders as local notifications on your device, without using a RemDo-operated remote push server. Notifications may display details such as reminder titles. Supported notification actions include marking a reminder complete and snoozing it.</p>
+<p>You can manage notification permission and lock-screen visibility in your device settings. If notifications are disabled, your reminders may remain saved but alerts may no longer appear.</p>
+<h2>5. Siri and Shortcuts</h2>
+<p>If you choose to create reminders through Siri or Shortcuts on iOS, your spoken requests and commands may be processed by Apple's Siri services, subject to Apple's privacy practices and your Siri settings.</p>
+<p>Reminder details passed to RemDo enter its local storage and notification flow. Siri requests awaiting import into the app may be held temporarily on your device. See the <a href="https://www.apple.com/legal/privacy/" rel="noopener noreferrer" target="_blank">Apple Privacy Policy</a> for more information.</p>
+<h2>6. Premium subscriptions and trial usage</h2>
+<p>RemDo offers a trial of certain advanced features during the first seven newly created reminders. The usage counter is stored in Keychain on iOS and in local application preferences on Android. On iOS, trial-usage information may remain on the device after the app is uninstalled and reinstalled.</p>
+<p>On iOS, monthly and annual Premium subscriptions are offered through the Apple App Store and subscription access is managed using RevenueCat. Apple and RevenueCat may process technical information needed to manage purchases and verify subscription status under their own privacy policies. RemDo does not directly collect your payment card details. Premium purchase integration is not yet enabled on Android.</p>
+<p>More information: <a href="https://www.apple.com/legal/privacy/" rel="noopener noreferrer" target="_blank">Apple Privacy Policy</a> and <a href="https://www.revenuecat.com/privacy/" rel="noopener noreferrer" target="_blank">RevenueCat Privacy Policy</a>.</p>
+<h2>7. Advertising, analytics and online services</h2>
+<p>RemDo does not show ads, track you across apps for advertising or use a general user-behavior analytics SDK. RemDo does not operate a cloud service to sync your reminders.</p>
+<p>Features including Premium subscription verification, Siri, system backups and websites you choose to open may communicate with third-party providers. Those providers handle information under their own privacy policies.</p>
+<h2>8. Local storage and system backups</h2>
+<p>The reminder database and photo attachments are stored in app-specific space on your device. RemDo does not provide its own cloud syncing, account-based backup or data export service.</p>
+<p>Depending on your device and account settings, some application data may be included in Apple, Google or device-manufacturer system backups. Management and removal of those backups are governed by the relevant service and its settings.</p>
+<h2>9. Retention and deletion</h2>
+<p>You can edit and delete reminders within the app. Unused local photo copies associated with deleted reminders are also cleaned up. Uninstalling the app generally removes the reminder database and app-specific photo files, but operating-system backups may remain separately.</p>
+<p>Trial-usage records stored in iOS Keychain may persist after reinstalling the app. The developer cannot remotely view or delete reminder records stored on your device.</p>
+<h2>10. Data security</h2>
+<p>RemDo stores records in the operating system's app-specific storage. An additional RemDo-specific encryption layer for the local database is not documented; device passcodes, current operating-system updates and device security settings matter. No storage or transmission method provides an absolute security guarantee.</p>
+<h2>11. Support and email</h2>
+<p>For support, contact <a href="mailto:ibrahim.buu@gmail.com?subject=RemDo%20Privacy">ibrahim.buu@gmail.com</a>. If you email us, the message and contact details you provide may be processed to respond to your request and handle necessary follow-up. We recommend not including reminder titles, photos or other sensitive information in your message.</p>
+<p>Support correspondence may be retained as needed and in accordance with applicable legal obligations.</p>
+<h2>12. Your choices and privacy requests</h2>
+<p>You can manage notification, photo-library and Siri permissions through your device settings. You can view, change and delete reminders within the app. You may send requests under applicable privacy laws to our support address.</p>
+<p>Because RemDo has no user accounts, the developer cannot remotely manage the local records on your device on your behalf.</p>
+<h2>13. Children's privacy</h2>
+<p>The RemDo developer does not intentionally seek to collect personal information from children. There are no user accounts or public profiles. If you believe a child has sent personal information through support email, please contact us.</p>
+<h2>14. Changes and contact</h2>
+<p>This policy may be updated if RemDo's features or data practices change. The current version will be published on this page with an updated date. For questions or privacy requests, contact <a href="mailto:ibrahim.buu@gmail.com?subject=RemDo%20Privacy">ibrahim.buu@gmail.com</a>.</p>
+<div class="notice"><p><strong>Summary:</strong> Reminders and photo attachments are primarily stored on your device. RemDo has no account, advertising, analytics or its own cloud-sync service. Siri and App Store/RevenueCat subscription services are subject to their providers' privacy practices.</p></div>
+</section>
+</div>
+<footer id="pageFooter">© 2026 RemDo. Tüm hakları saklıdır.</footer>
+</main>
+<script>
     function showLanguage(language, updateHash = true) {
       const isEnglish = language === "en";
 
@@ -634,17 +271,17 @@
 
       document.documentElement.lang = isEnglish ? "en" : "tr";
       document.title = isEnglish
-        ? "Tutar — Privacy Policy"
-        : "Tutar — Gizlilik Politikası";
+        ? "RemDo — Privacy Policy"
+        : "RemDo — Gizlilik Politikası";
       document.getElementById("pageTitle").textContent = isEnglish
         ? "Privacy Policy"
         : "Gizlilik Politikası";
       document.getElementById("lastUpdated").textContent = isEnglish
-        ? "Last updated: October 26, 2026"
-        : "Son güncelleme: 26 Ekim 2026";
+        ? "Last updated: October 30, 2026"
+        : "Son güncelleme: 30 Ekim 2026";
       document.getElementById("pageFooter").textContent = isEnglish
-        ? "© 2026 Tutar. All rights reserved."
-        : "© 2026 Tutar. Tüm hakları saklıdır.";
+        ? "© 2026 RemDo. All rights reserved."
+        : "© 2026 RemDo. Tüm hakları saklıdır.";
 
       if (updateHash) {
         try {
